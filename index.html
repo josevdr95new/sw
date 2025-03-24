@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[PLANTILLA] Error 404 Demostrativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .demo-banner {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #ffe593;
+            z-index: 1000;
+            font-weight: 500;
+        }
+
+        body {
+            background: #f0f2f5;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 70px 20px 60px;
+        }
+
+        .error-container {
+            text-align: center;
+            background: white;
+            padding: 4rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            color: #2d3436;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            color: #636e72;
+            margin-bottom: 2rem;
+        }
+
+        .home-button {
+            background: #0984e3;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .home-button:hover {
+            background: #0873c4;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(9, 132, 227, 0.3);
+        }
+
+        .disclaimer {
+            max-width: 800px;
+            margin: 2rem auto;
+            font-size: 0.8em;
+            color: #6c757d;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: justify;
+        }
+
+        .legal-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            text-align: center;
+            font-size: 0.7em;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+
+        @media (max-width: 480px) {
+            .error-container {
+                padding: 2rem;
+            }
+            
+            .error-code {
+                font-size: 5rem;
+            }
+
+            .demo-banner {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+
+            .disclaimer {
+                font-size: 0.7em;
+                margin: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">
+        ⚠ DEMOSTRACIÓN TÉCNICA - Plantilla educativa
+        <div style="font-size: 0.8em; margin-top: 5px;">
+            Repositorio: github.com/josevdr95/error-template
+        </div>
+    </div>
+
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-message">Página no encontrada</h1>
+        <p>Este es un diseño de ejemplo para propósitos demostrativos.</p>
+        
+        <div style="margin: 2rem 0;">
+            <a href="/" class="home-button">Volver al inicio</a>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Descargo de responsabilidad (v1.0 - 2025):</strong><br>
+            Este proyecto es material educativo demostrativo. No tiene funcionalidad real,
+            no almacena datos personales y debe usarse exclusivamente como referencia técnica.
+            El autor (josevdr95) no se hace responsable del uso inadecuado o modificaciones no supervisadas.
+            © 2025 - Todos los derechos reservados.
+        </div>
+    </div>
+
+    <div class="legal-footer">
+        © 2025 Josevdr95 - v1.0 | 
+        <a href="#licencia" style="color: #0984e3; text-decoration: none;">Licencia MIT</a> | 
+        <a href="#terminos" style="color: #0984e3; text-decoration: none;">Términos de uso</a>
+    </div>
+</body>
+</html>
