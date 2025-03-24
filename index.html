@@ -3,154 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[PLANTILLA] Error 404 Demostrativo</title>
+    <title>Página de Bienvenida</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .demo-banner {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #fff3cd;
-            color: #856404;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 2px solid #ffe593;
-            z-index: 1000;
-            font-weight: 500;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            background: #f0f2f5;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 70px 20px 60px;
+            background-color: #f0f2f5;
         }
 
-        .error-container {
-            text-align: center;
-            background: white;
-            padding: 4rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            max-width: 600px;
-            width: 100%;
-            margin: 20px 0;
-        }
-
-        .error-code {
-            font-size: 8rem;
-            color: #2d3436;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .error-message {
-            font-size: 1.5rem;
-            color: #636e72;
-            margin-bottom: 2rem;
-        }
-
-        .home-button {
-            background: #0984e3;
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
             color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        .home-button:hover {
-            background: #0873c4;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(9, 132, 227, 0.3);
-        }
-
-        .disclaimer {
-            max-width: 800px;
-            margin: 2rem auto;
-            font-size: 0.8em;
-            color: #6c757d;
             padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-            text-align: justify;
-        }
-
-        .legal-footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 10px;
             text-align: center;
-            font-size: 0.7em;
-            color: #6c757d;
-            border-top: 1px solid #dee2e6;
         }
 
-        @media (max-width: 480px) {
-            .error-container {
-                padding: 2rem;
-            }
-            
-            .error-code {
-                font-size: 5rem;
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ecf0f1;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-color: white;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            flex: 1;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
             }
 
-            .demo-banner {
-                font-size: 0.9rem;
-                padding: 10px;
+            .features {
+                flex-direction: column;
             }
 
-            .disclaimer {
-                font-size: 0.7em;
-                margin: 1rem;
+            .hero h1 {
+                font-size: 2em;
             }
         }
     </style>
 </head>
 <body>
-    <div class="demo-banner">
-        ⚠ DEMOSTRACIÓN TÉCNICA - Plantilla educativa
-        <div style="font-size: 0.8em; margin-top: 5px;">
-            Repositorio: github.com/josevdr95/error-template
-        </div>
-    </div>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Logo</div>
+            <div class="nav-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+        </nav>
+    </header>
 
-    <div class="error-container">
-        <div class="error-code">404</div>
-        <h1 class="error-message">Página no encontrada</h1>
-        <p>Este es un diseño de ejemplo para propósitos demostrativos.</p>
-        
-        <div style="margin: 2rem 0;">
-            <a href="/" class="home-button">Volver al inicio</a>
-        </div>
+    <section class="hero">
+        <h1>Bienvenido a Nuestra Plataforma</h1>
+        <p>Descubre todo lo que podemos ofrecerte para potenciar tu negocio</p>
+        <a href="#" class="cta-button">Comienza Ahora</a>
+    </section>
 
-        <div class="disclaimer">
-            <strong>Descargo de responsabilidad (v1.0 - 2025):</strong><br>
-            Este proyecto es material educativo demostrativo. No tiene funcionalidad real,
-            no almacena datos personales y debe usarse exclusivamente como referencia técnica.
-            El autor (josevdr95) no se hace responsable del uso inadecuado o modificaciones no supervisadas.
-            © 2025 - Todos los derechos reservados.
+    <section class="features">
+        <div class="feature-card">
+            <h3>Diseño Moderno</h3>
+            <p>Interfaces limpias y profesionales</p>
         </div>
-    </div>
+        <div class="feature-card">
+            <h3>Responsivo</h3>
+            <p>Adaptable a todos los dispositivos</p>
+        </div>
+        <div class="feature-card">
+            <h3>Rápido</h3>
+            <p>Optimizado para máximo rendimiento</p>
+        </div>
+    </section>
 
-    <div class="legal-footer">
-        © 2025 Josevdr95 - v1.0 | 
-        <a href="#licencia" style="color: #0984e3; text-decoration: none;">Licencia MIT</a> | 
-        <a href="#terminos" style="color: #0984e3; text-decoration: none;">Términos de uso</a>
-    </div>
+    <footer>
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
