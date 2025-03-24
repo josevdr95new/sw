@@ -1,0 +1,22 @@
+{
+    "OUTDATED_THRESHOLD_MS": 7200000,
+    "TARGET_MESSAGE_TEXT": "ACTUALIZACIÓN",
+    "RSS_FEED_URL": "https://tg.i-c-a.su/rss/elecholguin?limit=35",
+    "PROXY_URLS": [
+        
+        "http://api.allorigins.win/get?url=",
+        "https://corsproxy.io/?"
+    ],
+    "MAX_MESSAGES": 35,
+    "REFRESH_COOLDOWN_MS": 100000,
+    "REQUEST_DELAY_MS": 3000,
+    "FILTER_OPTIONS": {
+        "ALL": "all",
+        "ACTUALIZACION": "actualizacion",
+        "NOTA": "nota",
+        "SITUACION_SEN": "situacion-sen",
+        "IMAGEN": "imagen"
+    },
+    "MONTH_IMAGE_BASE": "https://josevdr95new.github.io/sw/unehlg/",
+    "MONTH_IMAGE_EXT": ".png"
+}
