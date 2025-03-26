@@ -16,7 +16,6 @@ export const jokes = [
     "¿Qué hace un perro con un taladro? Taladrando.",
     "¿Qué es un vampiro en el polo norte? Un vampiro congelado.",
     "¿Por qué la computadora fue al médico? Porque tenía un virus.",
-    // 100 nuevos chistes agregados:
     "¿Qué hace una montaña en el gimnasio? Hacer cumbres.",
     "¿Cómo se despiden los químicos? Ácido un placer.",
     "¿Qué le dice un huevo a una sartén? Me tienes frito.",
