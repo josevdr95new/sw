@@ -44,7 +44,7 @@ export const config = {
             enabled: true,
             refreshable: true,
             min: 101,
-            max: 5000,
+            max: 1000,
             favoritable: false
         },
         letter: {

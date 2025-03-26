@@ -43,6 +43,7 @@ const lastUpdatedElement = document.getElementById('last-updated');
 
 // Countdown interval
 let countdownInterval;
+let autoRefreshInterval;
 
 // Menu functionality
 menuTrigger.addEventListener('click', () => {
@@ -99,6 +100,8 @@ function updateCountdown() {
     
     if (!timeRemaining || timeRemaining <= 0) {
         countdownElement.textContent = "¡Listo para actualizar!";
+        // Trigger automatic refresh when countdown reaches zero
+        updateAllContent(true);
         return;
     }
     
@@ -129,7 +132,8 @@ function updateAllContent(force = false) {
         if (countdownInterval) clearInterval(countdownInterval);
         countdownInterval = null;
         
-        dailyData = {
+        // Generate new content while preserving existing data structure
+        const newContent = {
             lastUpdated: new Date().getTime(),
             joke: contentGenerators.joke(),
             horoscope: contentGenerators.horoscope(),
@@ -141,25 +145,33 @@ function updateAllContent(force = false) {
             color: contentGenerators.color()
         };
         
+        // Update dailyData without losing reference
+        Object.assign(dailyData, newContent);
+        
         // Save to localStorage
         localStorage.setItem('dailyData', JSON.stringify(dailyData));
         
         // Start new countdown
         startCountdown();
+        
+        // Update UI
+        updateUI();
     }
-    
-    // Update UI with current data
-    updateUI();
 }
 
 // Function to update a specific content item
 function updateSingleContent(contentType) {
     if (config.contentSources[contentType] && config.contentSources[contentType].refreshable) {
         dailyData[contentType] = contentGenerators[contentType]();
+        dailyData.lastUpdated = new Date().getTime(); // Update timestamp
         localStorage.setItem('dailyData', JSON.stringify(dailyData));
         
         // Update only the relevant UI element
         updateContentUI(contentType);
+        
+        // Reset countdown
+        if (countdownInterval) clearInterval(countdownInterval);
+        startCountdown();
     }
 }
 
@@ -179,6 +191,7 @@ function updateUI() {
     document.getElementById('riddle-question').textContent = dailyData.riddle.question;
     document.getElementById('riddle-answer').textContent = dailyData.riddle.answer;
     riddleAnswer.classList.add('hidden');
+    showRiddleAnswerBtn.textContent = 'Ver respuesta';
     
     document.getElementById('lucky-number').textContent = dailyData.number;
     document.getElementById('lucky-letter').textContent = dailyData.letter;
@@ -197,7 +210,6 @@ function updateUI() {
     
     // Update countdown
     updateCountdown();
-    startCountdown();
 }
 
 // Function to update a specific UI element
@@ -221,6 +233,7 @@ function updateContentUI(contentType) {
             document.getElementById('riddle-question').textContent = dailyData.riddle.question;
             document.getElementById('riddle-answer').textContent = dailyData.riddle.answer;
             riddleAnswer.classList.add('hidden');
+            showRiddleAnswerBtn.textContent = 'Ver respuesta';
             break;
         case 'number':
             document.getElementById('lucky-number').textContent = dailyData.number;
@@ -247,10 +260,7 @@ function loadSavedData() {
         
         // Check if data needs refresh
         if (shouldRefreshContent()) {
-            // Clear existing countdown
-            if (countdownInterval) clearInterval(countdownInterval);
-            countdownInterval = null;
-            updateAllContent();
+            updateAllContent(true); // Force refresh if data is stale
         } else {
             updateUI();
             startCountdown();
@@ -262,6 +272,19 @@ function loadSavedData() {
     
     // Load favorites
     loadFavorites();
+    
+    // Start auto-refresh checker
+    startAutoRefreshChecker();
+}
+
+// Start interval to check for auto-refresh
+function startAutoRefreshChecker() {
+    if (autoRefreshInterval) clearInterval(autoRefreshInterval);
+    autoRefreshInterval = setInterval(() => {
+        if (shouldRefreshContent()) {
+            updateAllContent(true);
+        }
+    }, 60000); // Check every minute
 }
 
 // Save favorites to localStorage
@@ -280,30 +303,23 @@ function loadFavorites() {
 
 // Toggle favorite status for an item
 function toggleFavorite(contentType, content) {
-    // Skip if this content type is not favoritable
     if (config.contentSources[contentType] && 
         config.contentSources[contentType].favoritable === false) {
         return;
     }
     
     const contentArray = favorites[contentType];
-    
-    // Check if already favorited
     const index = contentArray.findIndex(item => {
         if (typeof content === 'object') {
-            // For objects like horoscope, word, etc.
             return JSON.stringify(item) === JSON.stringify(content);
         } else {
-            // For simple strings like joke, fact, etc.
             return item === content;
         }
     });
     
     if (index === -1) {
-        // Add to favorites
         contentArray.push(content);
     } else {
-        // Remove from favorites
         contentArray.splice(index, 1);
     }
     
@@ -314,13 +330,10 @@ function toggleFavorite(contentType, content) {
 // Check if an item is favorited
 function isFavorited(contentType, content) {
     const contentArray = favorites[contentType];
-    
     return contentArray.some(item => {
         if (typeof content === 'object') {
-            // For objects like horoscope, word, etc.
             return JSON.stringify(item) === JSON.stringify(content);
         } else {
-            // For simple strings like joke, fact, etc.
             return item === content;
         }
     });
@@ -338,7 +351,6 @@ function updateFavoriteButtonsUI() {
 // Update UI for a specific favorite button
 function updateFavoriteButtonUI(contentType) {
     const button = document.querySelector(`.favorite-btn[data-card="${contentType}"]`);
-    // Skip if button doesn't exist or content type is not favoritable
     if (!button || (config.contentSources[contentType] && 
                   config.contentSources[contentType].favoritable === false)) {
         return;
@@ -358,10 +370,7 @@ function updateFavoriteButtonUI(contentType) {
 
 // Show favorites page
 function showFavorites() {
-    // Hide main content
     document.querySelector('main').style.display = 'none';
-    
-    // Show favorites content
     let favoritesContainer = document.getElementById('favorites-container');
     
     if (!favoritesContainer) {
@@ -371,13 +380,9 @@ function showFavorites() {
         document.body.insertBefore(favoritesContainer, document.querySelector('footer'));
     }
     
-    // Ensure page scrolls to top when showing favorites
     window.scrollTo(0, 0);
-    
-    // Clear container
     favoritesContainer.innerHTML = '';
     
-    // Add back button
     const backButton = document.createElement('button');
     backButton.className = 'back-button';
     backButton.innerHTML = `
@@ -393,16 +398,13 @@ function showFavorites() {
     
     favoritesContainer.appendChild(backButton);
     
-    // Add title
     const title = document.createElement('h2');
     title.className = 'favorites-title';
     title.textContent = 'Mis Favoritos';
     favoritesContainer.appendChild(title);
     
-    // Render favorites
     Object.keys(favorites).forEach(type => {
         if (favorites[type].length > 0) {
-            // Add section title
             const sectionTitle = document.createElement('h3');
             sectionTitle.className = 'favorites-section-title';
             
@@ -420,7 +422,6 @@ function showFavorites() {
             
             favoritesContainer.appendChild(sectionTitle);
             
-            // Add cards for each favorite
             favorites[type].forEach((item, index) => {
                 const card = document.createElement('div');
                 card.className = 'card favorite-card';
@@ -452,7 +453,6 @@ function showFavorites() {
                         break;
                 }
                 
-                // Add delete button
                 cardContent += `
                     <button class="remove-favorite-btn" data-type="${type}" data-index="${index}">
                         <svg width="20" height="20" viewBox="0 0 24 24">
@@ -468,7 +468,6 @@ function showFavorites() {
         }
     });
     
-    // If no favorites
     if (Object.values(favorites).every(arr => arr.length === 0)) {
         const noFavorites = document.createElement('p');
         noFavorites.className = 'no-favorites';
@@ -476,7 +475,6 @@ function showFavorites() {
         favoritesContainer.appendChild(noFavorites);
     }
     
-    // Add event listeners for remove buttons
     document.querySelectorAll('.remove-favorite-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             const type = e.currentTarget.getAttribute('data-type');
@@ -485,24 +483,20 @@ function showFavorites() {
             favorites[type].splice(index, 1);
             saveFavorites();
             updateFavoriteButtonsUI();
-            showFavorites(); // Refresh favorites view
+            showFavorites();
         });
     });
     
-    // Show container
     favoritesContainer.style.display = 'block';
-    
-    // Close menu if open
     closeMenuFunction();
 }
 
-// Show riddle answer
+// Event Listeners
 showRiddleAnswerBtn.addEventListener('click', () => {
     riddleAnswer.classList.toggle('hidden');
     showRiddleAnswerBtn.textContent = riddleAnswer.classList.contains('hidden') ? 'Ver respuesta' : 'Ocultar respuesta';
 });
 
-// Refresh all button
 refreshAllButton.addEventListener('click', () => {
     refreshAllButton.querySelector('svg').style.animation = 'none';
     void refreshAllButton.offsetWidth;
@@ -510,21 +504,18 @@ refreshAllButton.addEventListener('click', () => {
     updateAllContent(true);
 });
 
-// WhatsApp Share button
 shareButton.addEventListener('click', () => {
     const text = encodeURIComponent(config.shareText);
     const whatsappIntentUrl = `intent://send?text=${text}#Intent;scheme=whatsapp;package=com.whatsapp;end`;
     window.location.href = whatsappIntentUrl;
 });
 
-// Developer button
 viewDeveloperButton.addEventListener('click', () => {
     const developerUrl = config.developerUrl;
     const chromeIntent = `intent://${developerUrl}#Intent;scheme=https;package=com.android.chrome;end`;
     window.location.href = chromeIntent;
 });
 
-// Favorite buttons
 favoriteButtons.forEach(button => {
     button.addEventListener('click', (e) => {
         const contentType = e.currentTarget.getAttribute('data-card');
@@ -532,36 +523,28 @@ favoriteButtons.forEach(button => {
     });
 });
 
-// Home button functionality
 homeLink.addEventListener('click', (e) => {
     e.preventDefault();
     closeMenuFunction();
     
-    // Hide favorites container if visible
     const favoritesContainer = document.getElementById('favorites-container');
     if (favoritesContainer) {
         favoritesContainer.style.display = 'none';
     }
     
-    // Show main content
     document.querySelector('main').style.display = 'block';
-    
-    // Scroll to top
     window.scrollTo(0, 0);
     
-    // Update active state in menu
     document.querySelectorAll('#side-menu a').forEach(link => {
         link.classList.remove('active');
     });
     homeLink.classList.add('active');
 });
 
-// Favorites menu link
 favoritesLink.addEventListener('click', (e) => {
     e.preventDefault();
     showFavorites();
     
-    // Update active state in menu
     document.querySelectorAll('#side-menu a').forEach(link => {
         link.classList.remove('active');
     });
