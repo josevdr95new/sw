@@ -1,5 +1,5 @@
 import { config } from 'https://josevdr95new.github.io/sw/dailydosis/config.js';
-import { contentGenerators } from './contentGenerators.js';
+import { contentGenerators } from 'https://josevdr95new.github.io/sw/dailydosis/contentGenerators.js';
 
 // Data storage
 let dailyData = {

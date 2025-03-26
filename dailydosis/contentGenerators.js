@@ -1,6 +1,6 @@
 // Content data generators for DailyDosis app
 import { config } from 'https://josevdr95new.github.io/sw/dailydosis/data/config.js';
-import { jokes } from 'https://josevdr95new.github.io/sw/dailydosis/data/data/jokes.js';
+import { jokes } from 'https://josevdr95new.github.io/sw/dailydosis/data/jokes.js';
 import { horoscopePredictions, signs } from 'https://josevdr95new.github.io/sw/dailydosis/data/horoscopes.js';
 import { facts } from 'https://josevdr95new.github.io/sw/dailydosis/data/facts.js';
 import { words } from 'https://josevdr95new.github.io/sw/dailydosis/data/words.js';
