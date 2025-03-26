@@ -38,7 +38,11 @@ const showRiddleAnswerBtn = document.getElementById('show-riddle-answer');
 const riddleAnswer = document.getElementById('riddle-answer');
 const favoriteButtons = document.querySelectorAll('.favorite-btn');
 const favoritesLink = document.getElementById('favorites-link');
+const homeLink = document.getElementById('home-link');
 const lastUpdatedElement = document.getElementById('last-updated');
+
+// Countdown interval
+let countdownInterval;
 
 // Menu functionality
 menuTrigger.addEventListener('click', () => {
@@ -68,6 +72,47 @@ function formatDate(timestamp) {
     return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
 
+// Function to calculate time remaining until next update
+function calculateTimeRemaining() {
+    if (!dailyData.lastUpdated) return null;
+    
+    const nextUpdate = dailyData.lastUpdated + config.refreshInterval;
+    const now = new Date().getTime();
+    return nextUpdate - now;
+}
+
+// Function to format countdown time
+function formatCountdown(milliseconds) {
+    if (milliseconds <= 0) return "00:00:00";
+    
+    const seconds = Math.floor((milliseconds / 1000) % 60);
+    const minutes = Math.floor((milliseconds / (1000 * 60)) % 60);
+    const hours = Math.floor((milliseconds / (1000 * 60 * 60)) % 24);
+
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
+
+// Function to update countdown display
+function updateCountdown() {
+    const timeRemaining = calculateTimeRemaining();
+    const countdownElement = document.getElementById('refresh-countdown');
+    
+    if (!timeRemaining || timeRemaining <= 0) {
+        countdownElement.textContent = "¡Listo para actualizar!";
+        return;
+    }
+    
+    countdownElement.textContent = `Próxima actualización en: ${formatCountdown(timeRemaining)}`;
+}
+
+// Start countdown timer
+function startCountdown() {
+    if (!countdownInterval) {
+        updateCountdown();
+        countdownInterval = setInterval(updateCountdown, 1000);
+    }
+}
+
 // Function to check if content needs refresh
 function shouldRefreshContent() {
     if (!dailyData.lastUpdated) return true;
@@ -80,6 +125,10 @@ function shouldRefreshContent() {
 // Function to update all content
 function updateAllContent(force = false) {
     if (force || shouldRefreshContent()) {
+        // Clear existing countdown
+        if (countdownInterval) clearInterval(countdownInterval);
+        countdownInterval = null;
+        
         dailyData = {
             lastUpdated: new Date().getTime(),
             joke: contentGenerators.joke(),
@@ -94,6 +143,9 @@ function updateAllContent(force = false) {
         
         // Save to localStorage
         localStorage.setItem('dailyData', JSON.stringify(dailyData));
+        
+        // Start new countdown
+        startCountdown();
     }
     
     // Update UI with current data
@@ -142,6 +194,10 @@ function updateUI() {
     
     // Update favorite buttons
     updateFavoriteButtonsUI();
+    
+    // Update countdown
+    updateCountdown();
+    startCountdown();
 }
 
 // Function to update a specific UI element
@@ -191,9 +247,13 @@ function loadSavedData() {
         
         // Check if data needs refresh
         if (shouldRefreshContent()) {
+            // Clear existing countdown
+            if (countdownInterval) clearInterval(countdownInterval);
+            countdownInterval = null;
             updateAllContent();
         } else {
             updateUI();
+            startCountdown();
         }
     } else {
         // First load - generate all content
@@ -472,10 +532,40 @@ favoriteButtons.forEach(button => {
     });
 });
 
+// Home button functionality
+homeLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeMenuFunction();
+    
+    // Hide favorites container if visible
+    const favoritesContainer = document.getElementById('favorites-container');
+    if (favoritesContainer) {
+        favoritesContainer.style.display = 'none';
+    }
+    
+    // Show main content
+    document.querySelector('main').style.display = 'block';
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
+    
+    // Update active state in menu
+    document.querySelectorAll('#side-menu a').forEach(link => {
+        link.classList.remove('active');
+    });
+    homeLink.classList.add('active');
+});
+
 // Favorites menu link
 favoritesLink.addEventListener('click', (e) => {
     e.preventDefault();
     showFavorites();
+    
+    // Update active state in menu
+    document.querySelectorAll('#side-menu a').forEach(link => {
+        link.classList.remove('active');
+    });
+    favoritesLink.classList.add('active');
 });
 
 // CSS animation for rotate

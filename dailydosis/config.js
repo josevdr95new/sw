@@ -8,7 +8,8 @@ export const config = {
     year: "2025",
     
     // Content update settings
-    refreshInterval: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
+    // refreshInterval: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
+	refreshInterval: 2 * 60 * 1000, // 2 minutos en milisegundos
     
     // Share settings
     shareText: "Visita DailyDosis en https://dailydosis.pages.dev/",
@@ -42,8 +43,8 @@ export const config = {
         number: {
             enabled: true,
             refreshable: true,
-            min: 1,
-            max: 100,
+            min: 101,
+            max: 5000,
             favoritable: false
         },
         letter: {
