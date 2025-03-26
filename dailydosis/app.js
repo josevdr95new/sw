@@ -1,4 +1,4 @@
-import { config } from './config.js';
+import { config } from 'https://josevdr95new.github.io/sw/dailydosis/config.js';
 import { contentGenerators } from './contentGenerators.js';
 
 // Data storage
