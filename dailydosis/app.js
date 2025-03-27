@@ -496,14 +496,14 @@ showRiddleAnswerBtn.addEventListener('click', () => {
     riddleAnswer.classList.toggle('hidden');
     showRiddleAnswerBtn.textContent = riddleAnswer.classList.contains('hidden') ? 'Ver respuesta' : 'Ocultar respuesta';
 });
-
+/*
 refreshAllButton.addEventListener('click', () => {
     refreshAllButton.querySelector('svg').style.animation = 'none';
     void refreshAllButton.offsetWidth;
     refreshAllButton.querySelector('svg').style.animation = 'rotate 0.7s ease-in-out';
     updateAllContent(true);
 });
-
+*/
 shareButton.addEventListener('click', () => {
     const text = encodeURIComponent(config.shareText);
     const whatsappIntentUrl = `intent://send?text=${text}#Intent;scheme=whatsapp;package=com.whatsapp;end`;
