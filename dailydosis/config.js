@@ -26,7 +26,7 @@ export const config = {
         horoscope: {
             enabled: true,
             refreshable: true,
-			favoritable: false
+			favoritable: false,
             signs: []
         },
         fact: {
