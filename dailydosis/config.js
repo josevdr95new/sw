@@ -8,11 +8,11 @@ export const config = {
     year: "2025",
     
     // Content update settings
-    // refreshInterval: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
-	refreshInterval: 2 * 60 * 1000, // 2 minutos en milisegundos
+     refreshInterval: 24 * 60 * 60 * 1000, // 24 hours in milliseconds
+	// refreshInterval: 2 * 60 * 1000, // 2 minutos en milisegundos
     
     // Share settings
-    shareText: "Visita DailyDosis en https://dailydosis.pages.dev/",
+    shareText: "Visita DOSIS DIARIA en https://www.apklis.cu/application/appinventor.ai_josevdr95.DailyDosis",
     
     // Developer link
     developerUrl: "www.apklis.cu/developer/josevdr95",
