@@ -1,9 +1,9 @@
 {
     "OUTDATED_THRESHOLD_MS": 7200000,
     "TARGET_MESSAGE_TEXT": "ACTUALIZACIÓN",
-    "RSS_FEED_URL": "https://tg.i-c-a.su/rss/elecholguin?limit=35",
+    "RSS_FEED_URL": "https://unebotapi.onrender.com/rss",
     "PROXY_URLS": [
-	    "http://prueba.com?url=",
+	    "https://apiune.josevdr95.workers.dev/,
         "http://api.allorigins.win/get?url=",
         "https://corsproxy.io/?"
     ],
