@@ -1,15 +1,16 @@
 {
     "OUTDATED_THRESHOLD_MS": 7200000,
     "TARGET_MESSAGE_TEXT": "ACTUALIZACIÓN",
-    "RSS_FEED_URL": "https://unebotapi1.onrender.com/rss",
-    "PROXY_URLS": [
-	    "https://apiune.josevdr95.workers.dev/",
-        "http://api.allorigins.win/get?url=",
-        "https://corsproxy.io/?"
+    "RSS_FEED_URLS": [
+        "https://apiune.josevdr95.workers.dev/https://unebotapi1.onrender.com/rss",
+        "https://apiune.josevdr95.workers.dev/https://tg.i-c-a.su/rss/elecholguin?limit=35",
+        "http://api.allorigins.win/get?url=https://unebotapi1.onrender.com/rss",
+        "http://api.allorigins.win/get?url=https://tg.i-c-a.su/rss/elecholguin?limit=35",
+        "https://corsproxy.io/?https://unebotapi1.onrender.com/rss",
+        "https://corsproxy.io/?https://tg.i-c-a.su/rss/elecholguin?limit=35"
     ],
     "MAX_MESSAGES": 35,
     "REFRESH_COOLDOWN_MS": 100000,
-    "REQUEST_DELAY_MS": 3000,
     "FILTER_OPTIONS": {
         "ALL": "all",
         "ACTUALIZACION": "actualizacion",
