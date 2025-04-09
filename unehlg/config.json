@@ -5,8 +5,6 @@
         "https://apiune.josevdr95.workers.dev/https://unebotapi1.onrender.com/rss",
 		"https://apiune.josevdr95.workers.dev/https://unebotapi1.onrender.com/rss",
 		"https://apiune.josevdr95.workers.dev/https://unebotapi1.onrender.com/rss",
-		"https://apiune.josevdr95.workers.dev/https://unebotapi1.onrender.com/rss",
-		"https://apiune.josevdr95.workers.dev/https://unebotapi1.onrender.com/rss",
         "https://apiune.josevdr95.workers.dev/https://tg.i-c-a.su/rss/elecholguin?limit=35",
         "http://api.allorigins.win/get?url=https://unebotapi1.onrender.com/rss",
         "http://api.allorigins.win/get?url=https://tg.i-c-a.su/rss/elecholguin?limit=35",
@@ -14,7 +12,7 @@
         "https://corsproxy.io/?https://tg.i-c-a.su/rss/elecholguin?limit=35"
     ],
     "MAX_MESSAGES": 35,
-    "REFRESH_COOLDOWN_MS": 100000,
+    "REFRESH_COOLDOWN_MS": 30000,
     "FILTER_OPTIONS": {
         "ALL": "all",
         "ACTUALIZACION": "actualizacion",
