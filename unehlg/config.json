@@ -4,8 +4,8 @@
     "RSS_FEED_URLS": [
         "https://apiune.josevdr95.workers.dev/https://unebotapi1.onrender.com/rss",
         "https://apiune.josevdr95.workers.dev/https://tg.i-c-a.su/rss/elecholguin?limit=35",
-        "http://api.allorigins.win/get?url=https://unebotapi1.onrender.com/rss",
-        "http://api.allorigins.win/get?url=https://tg.i-c-a.su/rss/elecholguin?limit=35",
+        "https://api.allorigins.win/get?url=https://unebotapi1.onrender.com/rss",
+        "https://api.allorigins.win/get?url=https://tg.i-c-a.su/rss/elecholguin?limit=35",
         "https://corsproxy.io/?https://unebotapi1.onrender.com/rss",
         "https://corsproxy.io/?https://tg.i-c-a.su/rss/elecholguin?limit=35",
 		"https://apiune.josevdr95.workers.dev/https://unebotapi1.onrender.com/rss"
