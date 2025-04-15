@@ -2,11 +2,11 @@
     "OUTDATED_THRESHOLD_MS": 7200000,
     "TARGET_MESSAGE_TEXT": "ACTUALIZACIÓN",
     "RSS_FEED_URLS": [    
-		"https://333api.allorigins.win/raw?url=https://unebotapi1.onrender.com/rss",
-		"https://333apiune.josevdr95.workers.dev/https%3A%2F%2Funebotapi1.onrender.com%2Frss"
+		"https://api.allorigins.win/raw?url=https://unebotapi1.onrender.com/rss",
+		"https://apiune.josevdr95.workers.dev/https%3A%2F%2Funebotapi1.onrender.com%2Frss"
     ],
     "MAX_MESSAGES": 35,
-    "REFRESH_COOLDOWN_MS": 30000,
+    "REFRESH_COOLDOWN_MS": 0,
     "FILTER_OPTIONS": {
         "ALL": "all",
         "ACTUALIZACION": "actualizacion",
