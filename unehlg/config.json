@@ -6,7 +6,7 @@
 		"https://apiune.josevdr95.workers.dev/https%3A%2F%2Funebotapi1.onrender.com%2Frss"
     ],
     "MAX_MESSAGES": 35,
-    "REFRESH_COOLDOWN_MS": 0,
+    "REFRESH_COOLDOWN_MS": 30000,
     "FILTER_OPTIONS": {
         "ALL": "all",
         "ACTUALIZACION": "actualizacion",
