@@ -1,0 +1,8 @@
+{
+    "message": "Texto del mensaje",
+    "styles": {
+        "color": "#ff0000",
+        "fontSize": "24px",
+        "backgroundColor": "#000000"
+    }
+}
