@@ -1,8 +1,10 @@
 {
-    "message": "Texto del mensaje",
+    "message": "✨ Mensaje personalizado con emojis",
     "styles": {
-        "color": "#ff0000",
-        "fontSize": "24px",
-        "backgroundColor": "#000000"
+        "color": "#ff5722",
+        "backgroundColor": "#263238",
+        "fontSize": "1.5em",
+        "fontWeight": "bold",
+        "textShadow": "1px 1px 2px #000"
     }
 }
