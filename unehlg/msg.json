@@ -1,10 +1,6 @@
 {
-    "message": "✨ Mensaje personalizado con emojis",
+    "message": "🚨 Si la aplicación presenta problemas, contáctenos",
     "styles": {
-        "color": "#ff5722",
-        "backgroundColor": "#263238",
-        "fontSize": "1.5em",
-        "fontWeight": "bold",
-        "textShadow": "1px 1px 2px #000"
+        "color": "blue"
     }
 }
