@@ -1,160 +1,205 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Bienvenida</title>
+    <title>Color Converter Template</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
+        /* === TEMPLATE STYLES === */
         body {
-            background-color: #f0f2f5;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .nav {
+            font-family: Arial, sans-serif;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            background-color: #f0f0f0;
+            padding: 20px;
         }
 
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ecf0f1;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
+        .container {
             background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
         }
 
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #2c3e50;
+        .color-picker {
+            margin: 20px 0;
         }
 
-        .hero p {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
+        .color-preview {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            border-radius: 8px;
             transition: background-color 0.3s;
         }
 
-        .cta-button:hover {
-            background-color: #2980b9;
+        .color-formats {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border-radius: 8px;
         }
 
-        .features {
+        .format-group {
+            margin: 10px 0;
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .feature-card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-            flex: 1;
+        .format-value {
+            font-family: monospace;
+            margin: 0 10px;
         }
 
-        footer {
-            background-color: #2c3e50;
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
             color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+        button:hover {
+            background-color: #45a049;
+        }
 
-            .features {
-                flex-direction: column;
-            }
-
-            .hero h1 {
-                font-size: 2em;
-            }
+        h2::after {
+            content: " (Template Example)";
+            font-size: 0.8em;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">Logo</div>
-            <div class="nav-links">
-                <a href="#inicio">Inicio</a>
-                <a href="#servicios">Servicios</a>
-                <a href="#contacto">Contacto</a>
+    <div class="container">
+        <h2>Color Converter</h2>
+        
+        <input type="color" class="color-picker" id="colorPicker" value="#ff0000">
+        
+        <div class="color-preview" id="colorPreview"></div>
+        
+        <div class="color-formats">
+            <div class="format-group">
+                <div>
+                    <strong>HEX:</strong> 
+                    <span class="format-value" id="hexValue">#ff0000</span>
+                </div>
+                <button onclick="copyToClipboard('hexValue')">Copy</button>
             </div>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Bienvenido a Nuestra Plataforma</h1>
-        <p>Descubre todo lo que podemos ofrecerte para potenciar tu negocio</p>
-        <a href="#" class="cta-button">Comienza Ahora</a>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <h3>Diseño Moderno</h3>
-            <p>Interfaces limpias y profesionales</p>
+            <div class="format-group">
+                <div>
+                    <strong>RGB:</strong> 
+                    <span class="format-value" id="rgbValue">rgb(255, 0, 0)</span>
+                </div>
+                <button onclick="copyToClipboard('rgbValue')">Copy</button>
+            </div>
+            <div class="format-group">
+                <div>
+                    <strong>HSL:</strong> 
+                    <span class="format-value" id="hslValue">hsl(0, 100%, 50%)</span>
+                </div>
+                <button onclick="copyToClipboard('hslValue')">Copy</button>
+            </div>
+            <div class="format-group">
+                <div>
+                    <strong>CMYK:</strong> 
+                    <span class="format-value" id="cmykValue">cmyk(0%, 100%, 100%, 0%)</span>
+                </div>
+                <button onclick="copyToClipboard('cmykValue')">Copy</button>
+            </div>
         </div>
-        <div class="feature-card">
-            <h3>Responsivo</h3>
-            <p>Adaptable a todos los dispositivos</p>
-        </div>
-        <div class="feature-card">
-            <h3>Rápido</h3>
-            <p>Optimizado para máximo rendimiento</p>
-        </div>
-    </section>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
-    </footer>
+    <script>
+        // === COLOR CONVERSION FUNCTIONS ===
+        const colorPicker = document.getElementById('colorPicker');
+        const colorPreview = document.getElementById('colorPreview');
+        
+        // Initialize with default color
+        updateColorValues();
+
+        colorPicker.addEventListener('input', updateColorValues);
+
+        function updateColorValues() {
+            const hexColor = colorPicker.value;
+            colorPreview.style.backgroundColor = hexColor;
+            
+            // Update HEX value
+            document.getElementById('hexValue').textContent = hexColor;
+            
+            // Convert to RGB
+            const rgb = hexToRgb(hexColor);
+            document.getElementById('rgbValue').textContent = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
+            
+            // Convert to HSL
+            const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+            document.getElementById('hslValue').textContent = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`;
+            
+            // Convert to CMYK
+            const cmyk = rgbToCmyk(rgb.r, rgb.g, rgb.b);
+            document.getElementById('cmykValue').textContent = `cmyk(${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%)`;
+        }
+
+        function hexToRgb(hex) {
+            const r = parseInt(hex.slice(1, 3), 16);
+            const g = parseInt(hex.slice(3, 5), 16);
+            const b = parseInt(hex.slice(5, 7), 16);
+            return { r, g, b };
+        }
+
+        function rgbToHsl(r, g, b) {
+            r /= 255; g /= 255; b /= 255;
+            const max = Math.max(r, g, b), min = Math.min(r, g, b);
+            let h, s, l = (max + min) / 2;
+
+            if (max === min) {
+                h = s = 0;
+            } else {
+                const d = max - min;
+                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+                switch (max) {
+                    case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+                    case g: h = (b - r) / d + 2; break;
+                    case b: h = (r - g) / d + 4; break;
+                }
+                h = Math.round(h * 60);
+                s = Math.round(s * 100);
+                l = Math.round(l * 100);
+            }
+            return { h, s, l };
+        }
+
+        function rgbToCmyk(r, g, b) {
+            if (r === 0 && g === 0 && b === 0) return { c: 0, m: 0, y: 0, k: 100 };
+            
+            let c = 1 - (r / 255);
+            let m = 1 - (g / 255);
+            let y = 1 - (b / 255);
+            const k = Math.min(c, m, y);
+            
+            c = Math.round(((c - k) / (1 - k)) * 100) || 0;
+            m = Math.round(((m - k) / (1 - k)) * 100) || 0;
+            y = Math.round(((y - k) / (1 - k)) * 100) || 0;
+            
+            return { c, m, y, k: Math.round(k * 100) };
+        }
+
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                btn.textContent = 'Copied!';
+                setTimeout(() => btn.textContent = 'Copy', 2000);
+            });
+        }
+    </script>
 </body>
 </html>
