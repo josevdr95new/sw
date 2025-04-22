@@ -2,8 +2,8 @@
     "OUTDATED_THRESHOLD_MS": 7200000,
     "TARGET_MESSAGE_TEXT": "ACTUALIZACIÓN",
     "RSS_FEED_URLS": [
-		"https://corsproxy.io/https://unebotapi1.onrender.com/rss",
-		"https://api.cors.lol/?url="
+		"https://api.allorigins.win/raw?url=https://unebotapi1.onrender.com/rss",
+		"https://corsproxy.io/?url=https://unebotapi1.onrender.com/rss"
     ],
     "MAX_MESSAGES": 35,
     "REFRESH_COOLDOWN_MS": 30000,
