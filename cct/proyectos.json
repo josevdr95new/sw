@@ -1,0 +1,52 @@
+{
+  "airdrop": [
+{
+  "nombre": "MTT Sports",
+  "descripcion": "¡MTT Sports es un juego de poker online GRATIS para ganar criptomonedas gratis!",
+  "estado": "Activo",
+  "pago": "Sí",
+  "gratis": "Sí",
+  "enlace": "https://mtt.xyz/share/ab9e13a0",
+  "imagen": "https://www.thecryptoupdates.com/wp-content/uploads/2024/09/Untitled-design-1-960x560.jpg",
+  "fechaPublicacion": "2025-01-25"
+}
+  ],
+  "mineria": [
+
+  ],
+  "juegos": [
+    {
+            "nombre": "Sunflower Land",
+            "descripcion": "Sunflower Land es un juego play-to-earn donde puedes cultivar, recolectar y comerciar recursos. Lleva 2 años en línea y cuenta con una economía sostenible. Es necesario invertir para migrar las ganancias del juego normal a NFT.",
+            "estado": "Activo",
+            "pago": "Sí",
+            "gratis": "Sí",
+            "enlace": "https://sunflower-land.com/play/?ref=Skulldr",
+            "imagen": "https://images.ctfassets.net/the2mlmvkyaw/49vYX8z05Pui0bRC1BtWs3/fed4eb45be7941c0bc3108e965624d32/Sunflower_land.png",
+            "fechaPublicacion": "2025-01-09"
+        }
+  ],
+  "faucet": [],
+  "otros": [
+    {
+      "nombre": "FaucetPay",
+      "descripcion": "FaucetPay es una plataforma que permite recibir y retirar pequeñas cantidades de criptomonedas de faucets y otros servicios. Es útil para acumular fondos antes de transferirlos a una wallet principal.",
+      "estado": "Activo",
+      "pago": "Sí",
+      "gratis": "Sí",
+      "enlace": "https://faucetpay.io/?r=408239",
+      "imagen": "https://faucetpay.io/static/media/wallet.2d6239fc.webp",
+      "fechaPublicacion": "2025-01-14"
+    },
+    {
+      "nombre": "Coinex",
+      "descripcion": "Coinex es un intercambio de criptomonedas que funciona para cubanos, permitiendo operaciones P2P y la verificación KYC.",
+      "estado": "Activo",
+      "pago": "Sí",
+      "gratis": "Sí",
+      "fechaPublicacion": "2025-01-15",
+      "imagen": "https://logowik.com/content/uploads/images/coinex9788.jpg",
+      "enlace": "https://www.coinex.com/en/register?refer_code=r8g3w"
+    }
+  ]
+    }
