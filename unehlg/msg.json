@@ -1,6 +1,6 @@
 {
-    "message": "🚨 Si la aplicación presenta problemas, contáctenos",
+    "message": "🚨 APK sin servicio hasta nuevo aviso",
     "styles": {
-        "color": "blue"
+        "color": "red"
     }
 }
