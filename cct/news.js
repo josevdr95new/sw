@@ -67,7 +67,7 @@ const loadNews = async (forceRefresh = false) => {
         <div class="news-title">${title}</div>
         <div class="news-date">${formattedDate}</div>
         <div class="news-description">${description}</div>
-        <a class="news-link" href="#" onclick="window.location.href = 'intent://${link.replace(/^https?:\/\//, '')}#Intent;scheme=https;end'">Leer más...</a>
+        <a class="news-link" href="${link}" target="_blank" rel="noopener">Leer más...</a>
       `;
       newsContainer.appendChild(newsItem);
     });
@@ -133,9 +133,8 @@ const showNewsModal = () => {
   loadNews(false);
 };
 
-const loadAppNews = async (containerId = 'appNewsContainer', isModal = false) => {
-  const appNewsContainer = document.getElementById(containerId);
-  if (!appNewsContainer) return;
+const loadAppNews = async () => {
+  const appNewsContainer = document.getElementById('appNewsContainer');
   appNewsContainer.innerHTML = '<p>Cargando noticias...</p>';
 
   try {
@@ -144,26 +143,24 @@ const loadAppNews = async (containerId = 'appNewsContainer', isModal = false) =>
     const messages = JSON.parse(text);
 
     messages.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-    const messagesToShow = isModal ? messages : messages.slice(0, 5);
+    const recentMessages = messages.slice(0, 5);
     appNewsContainer.innerHTML = '';
 
-    messagesToShow.forEach((item, index) => {
+    recentMessages.forEach((item, index) => {
       const newsItem = document.createElement('div');
-      const isLatest = index === 0;
-      newsItem.className = 'app-news-item' + (isLatest ? ' latest-news' : '');
+      newsItem.className = 'app-news-item';
       newsItem.innerHTML = `
         ${item.img ? `<img src="${item.img}" alt="Noticia">` : ''}
         <div class="app-news-content">
-          ${isLatest ? '<span class="latest-badge">NUEVO</span>' : ''}
           <div class="news-date">${item.fecha}</div>
           <h4>${item.titulo || 'Noticia'}</h4>
           <p>${item.descripcion}</p>
-          ${item.enlace && item.enlace.trim() !== '' ? `<a href="${item.enlace}" target="_blank">Clic para descargar...</a>` : ''}
+          ${item.enlace && item.enlace.trim() !== '' ? `<a href="${item.enlace}" target="_blank" rel="noopener">Clic para descargar...</a>` : ''}
         </div>
       `;
       appNewsContainer.appendChild(newsItem);
 
-      if (index < messagesToShow.length - 1) {
+      if (index < recentMessages.length - 1) {
         const separator = document.createElement('hr');
         separator.className = 'news-separator';
         appNewsContainer.appendChild(separator);
@@ -174,7 +171,7 @@ const loadAppNews = async (containerId = 'appNewsContainer', isModal = false) =>
     appNewsContainer.innerHTML = `
       <div class="error-container">
         <p class="error-message">Error al cargar las noticias de la app.</p>
-        <button class="retry-button" onclick="loadAppNews('${containerId}', ${isModal})">
+        <button class="retry-button" onclick="loadAppNews()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M23 4v6h-6M1 20v-6h6"/>
             <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
@@ -186,14 +183,8 @@ const loadAppNews = async (containerId = 'appNewsContainer', isModal = false) =>
   }
 };
 
-const showAppNewsModal = () => {
-  showModal('appNews');
-  loadAppNews('modalAppNewsContainer', true);
-};
-
 // Exportar funciones al ámbito global
 window.loadNews = loadNews;
 window.showNewsModal = showNewsModal;
 window.loadAppNews = loadAppNews;
 window.forceRefreshNews = forceRefreshNews;
-window.showAppNewsModal = showAppNewsModal;
