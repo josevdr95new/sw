@@ -1,0 +1,289 @@
+[
+  {
+    "name": "Penguin Bro",
+    "description": "Aventura de pingüinos en el hielo",
+    "genre": "arcade",
+    "icon": "fas fa-snowflake",
+    "url": "https://swf2js.com/assets/swf/penguin_bro.swf"
+  },
+  {
+    "name": "Air War 1941",
+    "description": "Combate aéreo en la II Guerra Mundial",
+    "genre": "shooter",
+    "icon": "fas fa-fighter-jet",
+    "url": "https://swf2js.com/assets/swf/air_war.swf"
+  },
+  {
+    "name": "Alien Hominid",
+    "description": "Defiende la Tierra de la invasión alienígena",
+    "genre": "action",
+    "icon": "fab fa-reddit-alien",
+    "url": "https://archive.org/download/flash_alien_hominid/alien_hominid.swf"
+  },
+  {
+    "name": "N - Ninja",
+    "description": "Ninja veloz en laberintos mortales",
+    "genre": "platformer",
+    "icon": "fas fa-user-ninja",
+    "url": "https://archive.org/download/flash_n/n.swf"
+  },
+  {
+    "name": "Line Rider",
+    "description": "Dibuja pistas y deja que el jinete las recorra",
+    "genre": "creative",
+    "icon": "fas fa-pen-nib",
+    "url": "https://archive.org/download/LineRider_435/LineRider.swf"
+  },
+  {
+    "name": "Tetris Classic",
+    "description": "El clásico juego de puzzles",
+    "genre": "puzzle",
+    "icon": "fas fa-th",
+    "url": "https://archive.org/download/flash_tetris_2/tetris.swf"
+  },
+  {
+    "name": "Super Mario",
+    "description": "Aventura de plataformas clásica",
+    "genre": "platformer",
+    "icon": "fas fa-hat-cowboy",
+    "url": "https://swf2js.com/assets/swf/mario.swf"
+  },
+  {
+    "name": "Sonic Rush",
+    "description": "El erizo más rápido en carreras frenéticas",
+    "genre": "platformer",
+    "icon": "fas fa-bolt",
+    "url": "https://swf2js.com/assets/swf/sonic.swf"
+  },
+  {
+    "name": "Pac-Man",
+    "description": "Come puntos y esquiva a los fantasmas",
+    "genre": "arcade",
+    "icon": "fas fa-ghost",
+    "url": "https://swf2js.com/assets/swf/pacman.swf"
+  },
+  {
+    "name": "Pong Classic",
+    "description": "El primer videojuego de la historia",
+    "genre": "sports",
+    "icon": "fas fa-table-tennis",
+    "url": "https://swf2js.com/assets/swf/pong.swf"
+  },
+  {
+    "name": "Breakout",
+    "description": "Destruye bloques con la pelota",
+    "genre": "arcade",
+    "icon": "fas fa-brick",
+    "url": "https://swf2js.com/assets/swf/breakout.swf"
+  },
+  {
+    "name": "Frogger",
+    "description": "Ayuda a la rana a cruzar la carretera",
+    "genre": "arcade",
+    "icon": "fas fa-frog",
+    "url": "https://swf2js.com/assets/swf/frogger.swf"
+  },
+  {
+    "name": "Asteroids",
+    "description": "Destruye asteroides en el espacio",
+    "genre": "shooter",
+    "icon": "fas fa-meteor",
+    "url": "https://swf2js.com/assets/swf/asteroids.swf"
+  },
+  {
+    "name": "Donkey Kong",
+    "description": "Salva a Pauline del gorilla gigante",
+    "genre": "platformer",
+    "icon": "fas fa-dragon",
+    "url": "https://swf2js.com/assets/swf/donkeykong.swf"
+  },
+  {
+    "name": "Galaga",
+    "description": "Dispara a las naves alienígenas",
+    "genre": "shooter",
+    "icon": "fas fa-space-shuttle",
+    "url": "https://swf2js.com/assets/swf/galaga.swf"
+  },
+  {
+    "name": "Space Invaders",
+    "description": "El clásico invasor espacial",
+    "genre": "shooter",
+    "icon": "fas fa-robot",
+    "url": "https://swf2js.com/assets/swf/spaceinvaders.swf"
+  },
+  {
+    "name": "Centipede",
+    "description": "Elimina al ciempiés y sus enemigos",
+    "genre": "arcade",
+    "icon": "fas fa-bug",
+    "url": "https://swf2js.com/assets/swf/centipede.swf"
+  },
+  {
+    "name": "Duck Hunt",
+    "description": "Caza patos en un campo abierto",
+    "genre": "shooter",
+    "icon": "fas fa-dove",
+    "url": "https://swf2js.com/assets/swf/duckhunt.swf"
+  },
+  {
+    "name": "Boxhead",
+    "description": "Sobrevive a hordas de zombies",
+    "genre": "action",
+    "icon": "fas fa-skull",
+    "url": "https://archive.org/download/armorgames_boxhead_2play_rooms/boxhead_2play_rooms.swf"
+  },
+  {
+    "name": "Age of War",
+    "description": "Comanda tu civilización a través de las épocas",
+    "genre": "strategy",
+    "icon": "fas fa-chess",
+    "url": "https://archive.org/download/armorgames_age_of_war/age_of_war.swf"
+  },
+  {
+    "name": "Fancy Pants Adventure",
+    "description": "Explora el mundo con pantalones elegantes",
+    "genre": "platformer",
+    "icon": "fas fa-running",
+    "url": "https://archive.org/download/armorgames_fancy_pants_adventure/fancy_pants_adventure.swf"
+  },
+  {
+    "name": "Heli Attack 3",
+    "description": "Destruye helicópteros enemigos",
+    "genre": "shooter",
+    "icon": "fas fa-helicopter",
+    "url": "https://archive.org/download/armorgames_heli_attack_3/heli_attack_3.swf"
+  },
+  {
+    "name": "Portal",
+    "description": "Usa portales para resolver puzzles",
+    "genre": "puzzle",
+    "icon": "fas fa-circle",
+    "url": "https://archive.org/download/armorgames_portal/portal.swf"
+  },
+  {
+    "name": "Super Stacker",
+    "description": "Apila bloques sin que se caigan",
+    "genre": "puzzle",
+    "icon": "fas fa-layer-group",
+    "url": "https://archive.org/download/armorgames_super_stacker/super_stacker.swf"
+  },
+  {
+    "name": "Bubble Tanks",
+    "description": "Lucha como un tanque burbuja",
+    "genre": "action",
+    "icon": "fas fa-water",
+    "url": "https://archive.org/download/armorgames_bubble_tanks/bubble_tanks.swf"
+  },
+  {
+    "name": "Feudalism",
+    "description": "Conviértete en el rey de tu reino",
+    "genre": "action",
+    "icon": "fas fa-crown",
+    "url": "https://archive.org/download/armorgames_feudalism/feudalism.swf"
+  },
+  {
+    "name": "Storm the House",
+    "description": "Defiende tu casa de los invasores",
+    "genre": "action",
+    "icon": "fas fa-home",
+    "url": "https://archive.org/download/armorgames_storm_the_house/storm_the_house.swf"
+  },
+  {
+    "name": "Thing Thing Arena",
+    "description": "Combate brutal en una arena",
+    "genre": "action",
+    "icon": "fas fa-fist-raised",
+    "url": "https://archive.org/download/armorgames_thing_thing_arena/thing_thing_arena.swf"
+  },
+  {
+    "name": "Indestructo Tank",
+    "description": "Tanque indestructible que usa enemigos como armas",
+    "genre": "action",
+    "icon": "fas fa-car-crash",
+    "url": "https://archive.org/download/armorgames_indestructo_tank/indestructo_tank.swf"
+  },
+  {
+    "name": "Raze",
+    "description": "Shooter de disparos en arenas futuristas",
+    "genre": "shooter",
+    "icon": "fas fa-crosshairs",
+    "url": "https://archive.org/download/armorgames_raze/raze.swf"
+  },
+  {
+    "name": "Boxhead Zombies",
+    "description": "Supervivencia contra hordas de zombies",
+    "genre": "action",
+    "icon": "fas fa-brain",
+    "url": "https://archive.org/download/armorgames_boxhead_zombies/boxhead_zombies.swf"
+  },
+  {
+    "name": "Thing Thing 3",
+    "description": "Tercera entrega del shooter brutal",
+    "genre": "action",
+    "icon": "fas fa-skull-crossbones",
+    "url": "https://archive.org/download/armorgames_thing_thing_3/thing_thing_3.swf"
+  },
+  {
+    "name": "Heli Attack 2",
+    "description": "Ataque helicóptero versión 2",
+    "genre": "shooter",
+    "icon": "fas fa-helicopter",
+    "url": "https://archive.org/download/armorgames_heli_attack_2/heli_attack_2.swf"
+  },
+  {
+    "name": "Super Mario Flash",
+    "description": "Versión Flash del clásico de Nintendo",
+    "genre": "platformer",
+    "icon": "fas fa-gamepad",
+    "url": "https://archive.org/download/armorgames_super_mario_flash/super_mario_flash.swf"
+  },
+  {
+    "name": "Dad n Me",
+    "description": "Un hijo con su padre en combate",
+    "genre": "action",
+    "icon": "fas fa-user-tie",
+    "url": "https://archive.org/download/armorgames_dad_n_me/dad_n_me.swf"
+  },
+  {
+    "name": "Age of War 2",
+    "description": "Secuela del épico Age of War",
+    "genre": "strategy",
+    "icon": "fas fa-chess-queen",
+    "url": "https://archive.org/download/armorgames_age_of_war_2/age_of_war_2.swf"
+  },
+  {
+    "name": "Raze 2",
+    "description": "Segunda parte de Raze con más armas",
+    "genre": "shooter",
+    "icon": "fas fa-bullseye",
+    "url": "https://archive.org/download/armorgames_raze_2/raze_2.swf"
+  },
+  {
+    "name": "Heli Attack",
+    "description": "El original juego de ataque helicóptero",
+    "genre": "shooter",
+    "icon": "fas fa-plane-departure",
+    "url": "https://archive.org/download/armorgames_heli_attack/heli_attack.swf"
+  },
+  {
+    "name": "Boxhead 2Play",
+    "description": "Juega con un amigo en cooperativo",
+    "genre": "action",
+    "icon": "fas fa-users",
+    "url": "https://archive.org/download/armorgames_boxhead_2play/boxhead_2play.swf"
+  },
+  {
+    "name": "Storm the House 2",
+    "description": "Defiende tu casa con más enemigos",
+    "genre": "action",
+    "icon": "fas fa-shield-alt",
+    "url": "https://archive.org/download/armorgames_storm_the_house_2/storm_the_house_2.swf"
+  },
+  {
+    "name": "Fancy Pants 2",
+    "description": "Segunda aventura del elegante pantalón",
+    "genre": "platformer",
+    "icon": "fas fa-shoe-prints",
+    "url": "https://archive.org/download/armorgames_fancy_pants_2/fancy_pants_2.swf"
+  }
+]
