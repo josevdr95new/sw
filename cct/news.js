@@ -67,7 +67,7 @@ const loadNews = async (forceRefresh = false) => {
         <div class="news-title">${title}</div>
         <div class="news-date">${formattedDate}</div>
         <div class="news-description">${description}</div>
-        <a class="news-link" href="${link}" target="_blank" rel="noopener">Leer más...</a>
+        <a class="news-link" href="intent://${link.replace(/^https?:\/\//, '')}#Intent;scheme=https;action=android.intent.action.VIEW;end" target="_blank">Leer más...</a>
       `;
       newsContainer.appendChild(newsItem);
     });
@@ -155,7 +155,7 @@ const loadAppNews = async () => {
           <div class="news-date">${item.fecha}</div>
           <h4>${item.titulo || 'Noticia'}</h4>
           <p>${item.descripcion}</p>
-          ${item.enlace && item.enlace.trim() !== '' ? `<a href="${item.enlace}" target="_blank" rel="noopener">Clic para descargar...</a>` : ''}
+          ${item.enlace && item.enlace.trim() !== '' ? `<a href="intent://${item.enlace.replace(/^https?:\/\//, '')}#Intent;scheme=https;action=android.intent.action.VIEW;end" target="_blank">Clic para descargar...</a>` : ''}
         </div>
       `;
       appNewsContainer.appendChild(newsItem);
