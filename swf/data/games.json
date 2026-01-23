@@ -4,83 +4,95 @@
     "description": "Combina numeros para llegar al 2048",
     "genre": "puzzle",
     "icon": "fas fa-th",
-    "url": "https://gabrielecirulli.github.io/2048/"
+    "url": "https://gabrielecirulli.github.io/2048/",
+    "addedDate": "2024-01-15"
   },
   {
     "name": "Hextris",
     "description": "Tetris hexagonal de ritmo rapido",
     "genre": "arcade",
     "icon": "fas fa-shapes",
-    "url": "https://hextris.github.io/hextris/"
+    "url": "https://hextris.github.io/hextris/",
+    "addedDate": "2024-01-10"
   },
   {
     "name": "Snake IO",
     "description": "Serpiente multijugador en linea",
     "genre": "arcade",
     "icon": "fas fa-worm",
-    "url": "https://snake-gameonline.github.io/"
+    "url": "https://snake-gameonline.github.io/",
+    "addedDate": "2024-01-20"
   },
   {
     "name": "Flappy Bird",
     "description": "El clasico pajaro que no puede dejar de volar",
     "genre": "arcade",
     "icon": "fas fa-dove",
-    "url": "https://flappybird.io/"
+    "url": "https://flappybird.io/",
+    "addedDate": "2024-01-18"
   },
   {
     "name": "Chrome Dino",
     "description": "El dinosaurio de Chrome - salta y corre",
     "genre": "arcade",
     "icon": "fas fa-running",
-    "url": "https://codingwith-adam.github.io/dino-game/"
+    "url": "https://codingwith-adam.github.io/dino-game/",
+    "addedDate": "2024-01-05"
   },
   {
     "name": "Popcat",
     "description": "Haz que el gato haga pop - clicker global",
     "genre": "casual",
     "icon": "fas fa-cat",
-    "url": "https://popcat.click/"
+    "url": "https://popcat.click/",
+    "addedDate": "2024-01-22"
   },
   {
     "name": "Lichess",
     "description": "Ajedrez libre y gratuito sin anuncios",
     "genre": "strategy",
     "icon": "fas fa-chess",
-    "url": "https://lichess.org/"
+    "url": "https://lichess.org/",
+    "addedDate": "2024-01-08"
   },
   {
     "name": "Sudoku",
     "description": "Resuelve el clasico sudoku diario",
     "genre": "puzzle",
     "icon": "fas fa-th-large",
-    "url": "https://sudoku.com/"
+    "url": "https://sudoku.com/",
+    "addedDate": "2024-01-12"
   },
   {
     "name": "Checkers Online",
     "description": "Juego de damas clasico online",
     "genre": "strategy",
     "icon": "fas fa-chess-pawn",
-    "url": "https://checkers.online/"
+    "url": "https://checkers.online/",
+    "addedDate": "2024-01-14"
   },
   {
     "name": "Solitaire",
     "description": "El clasico juego de cartas solitario",
     "genre": "cards",
     "icon": "fas fa-cards",
-    "url": "https://solitaire.com/"
+    "url": "https://solitaire.com/",
+    "addedDate": "2024-01-16"
   },
   {
     "name": "MK48.io",
     "description": "Batalla naval de tanques y barcos",
     "genre": "action",
     "icon": "fas fa-ship",
-    "url": "https://mk48.io/"
+    "url": "https://mk48.io/",
+    "addedDate": "2024-01-19"
   },
   {
     "name": "Browser Pong",
     "description": "El clasico Pong con modos multijugador",
     "genre": "arcade",
     "icon": "fas fa-table-tennis-paddle-ball",
-    "url": "https://sethclydesdale.github.io/browser-pong/"
+    "url": "https://sethclydesdale.github.io/browser-pong/",
+    "addedDate": "2024-01-21"
   }
 ]
