@@ -5,7 +5,7 @@
     "genre": "puzzle",
     "icon": "fas fa-th",
     "url": "https://gabrielecirulli.github.io/2048/",
-    "addedDate": "2024-01-15"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Hextris",
@@ -13,7 +13,7 @@
     "genre": "arcade",
     "icon": "fas fa-shapes",
     "url": "https://hextris.github.io/hextris/",
-    "addedDate": "2024-01-10"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Snake IO",
@@ -21,7 +21,7 @@
     "genre": "arcade",
     "icon": "fas fa-worm",
     "url": "https://snake-gameonline.github.io/",
-    "addedDate": "2024-01-20"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Flappy Bird",
@@ -29,7 +29,7 @@
     "genre": "arcade",
     "icon": "fas fa-dove",
     "url": "https://flappybird.io/",
-    "addedDate": "2024-01-18"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Chrome Dino",
@@ -37,7 +37,7 @@
     "genre": "arcade",
     "icon": "fas fa-running",
     "url": "https://codingwith-adam.github.io/dino-game/",
-    "addedDate": "2024-01-05"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Popcat",
@@ -45,7 +45,7 @@
     "genre": "casual",
     "icon": "fas fa-cat",
     "url": "https://popcat.click/",
-    "addedDate": "2024-01-22"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Lichess",
@@ -53,7 +53,7 @@
     "genre": "strategy",
     "icon": "fas fa-chess",
     "url": "https://lichess.org/",
-    "addedDate": "2024-01-08"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Sudoku",
@@ -61,7 +61,7 @@
     "genre": "puzzle",
     "icon": "fas fa-th-large",
     "url": "https://sudoku.com/",
-    "addedDate": "2024-01-12"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Checkers Online",
@@ -69,7 +69,7 @@
     "genre": "strategy",
     "icon": "fas fa-chess-pawn",
     "url": "https://checkers.online/",
-    "addedDate": "2024-01-14"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Solitaire",
@@ -77,7 +77,7 @@
     "genre": "cards",
     "icon": "fas fa-cards",
     "url": "https://solitaire.com/",
-    "addedDate": "2024-01-16"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "MK48.io",
@@ -85,7 +85,7 @@
     "genre": "action",
     "icon": "fas fa-ship",
     "url": "https://mk48.io/",
-    "addedDate": "2024-01-19"
+    "addedDate": "2026-01-23"
   },
   {
     "name": "Browser Pong",
@@ -93,6 +93,6 @@
     "genre": "arcade",
     "icon": "fas fa-table-tennis-paddle-ball",
     "url": "https://sethclydesdale.github.io/browser-pong/",
-    "addedDate": "2024-01-21"
+    "addedDate": "2026-01-23"
   }
 ]
