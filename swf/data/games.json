@@ -1,106 +1,266 @@
 [
   {
-    "name": "2048",
-    "description": "Combina numeros para llegar al 2048",
-    "genre": "puzzle",
-    "icon": "fas fa-th",
-    "url": "https://gabrielecirulli.github.io/2048/",
-    "addedDate": "2026-01-23"
-  },
-  {
-    "name": "Hextris",
-    "description": "Tetris hexagonal de ritmo rapido",
-    "genre": "arcade",
-    "icon": "fas fa-shapes",
-    "url": "https://hextris.github.io/hextris/",
-    "addedDate": "2026-01-23"
-  },
-  {
-    "name": "Snake IO",
-    "description": "Serpiente multijugador en linea",
-    "genre": "arcade",
-    "icon": "fas fa-worm",
-    "url": "https://snake-gameonline.github.io/",
-    "addedDate": "2026-01-23"
-  },
-  {
-    "name": "Flappy Bird",
-    "description": "El clasico pajaro que no puede dejar de volar",
-    "genre": "arcade",
-    "icon": "fas fa-dove",
-    "url": "https://flappybird.io/",
-    "addedDate": "2026-01-23"
-  },
-  {
-    "name": "Chrome Dino",
-    "description": "El dinosaurio de Chrome - salta y corre",
-    "genre": "arcade",
-    "icon": "fas fa-running",
-    "url": "https://codingwith-adam.github.io/dino-game/",
-    "addedDate": "2026-01-23"
-  },
-  {
-    "name": "Popcat",
-    "description": "Haz que el gato haga pop - clicker global",
-    "genre": "casual",
-    "icon": "fas fa-cat",
-    "url": "https://popcat.click/",
-    "addedDate": "2026-01-23"
-  },
-  {
-    "name": "Lichess",
-    "description": "Ajedrez libre y gratuito sin anuncios",
+    "name": "Chess",
+    "description": "Ajedrez contra la computadora o amigo",
     "genre": "strategy",
-    "icon": "fas fa-chess",
-    "url": "https://lichess.org/",
-    "addedDate": "2026-01-23"
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/chess/index.html",
+    "addedDate": "2025-12-27"
+  },
+  {
+    "name": "Checkers",
+    "description": "Damas clásicas contra Albert la IA",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/checkers/index.html",
+    "addedDate": "2025-11-27"
+  },
+  {
+    "name": "Backgammon",
+    "description": "Backgammon con cubo de duplicación",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/backgammon/index.html",
+    "addedDate": "2025-11-27"
+  },
+  {
+    "name": "Dominoes",
+    "description": "Dominó contra 1-3 jugadores IA",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/domino/index.html",
+    "addedDate": "2025-12-27"
+  },
+  {
+    "name": "Othello",
+    "description": "Reversi contra la computadora",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/reversi/index.html",
+    "addedDate": "2025-06-27"
+  },
+  {
+    "name": "Nine Men's Morris",
+    "description": "El Molino - juego de estrategia milenario",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/mill-game/index.html",
+    "addedDate": "2025-06-27"
+  },
+  {
+    "name": "Battleship",
+    "description": "Batalla Naval contra la IA",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/battleship/index.html",
+    "addedDate": "2025-06-27"
+  },
+  {
+    "name": "Snakes and Ladders",
+    "description": "Serpientes y Escaleras clásico",
+    "genre": "casual",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/snakes-ladders/index.html",
+    "addedDate": "2025-06-27"
+  },
+  {
+    "name": "Mahjong Solitaire",
+    "description": "Mahjong con tiles chinos",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/mahjong/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "8 Ball Pool",
+    "description": "Bola 8 con física realista",
+    "genre": "sports",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/pool-billiards/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Freecell Solitaire",
+    "description": "Solitario Freecell sin publicidad",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/freecell-solitaire/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Klondike Solitaire",
+    "description": "Solitario clásico Klondike",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/klondike-solitaire/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Spider Solitaire",
+    "description": "Solitario Spider con 2 palos",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/spider-solitaire/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Pyramid Solitaire",
+    "description": "Solitario en forma de pirámide",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/pyramide/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Scorpion Solitaire",
+    "description": "Solitario Scorpion desafiante",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/scorpion/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Tripeaks Solitaire",
+    "description": "Solitario Tripeaks montañas",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/tri-peaks/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Golf Solitaire",
+    "description": "Solitario estilo golf",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/golf-solitaire/index.html",
+    "addedDate": "2025-12-26"
   },
   {
     "name": "Sudoku",
-    "description": "Resuelve el clasico sudoku diario",
+    "description": "Sudoku con validación automática",
     "genre": "puzzle",
-    "icon": "fas fa-th-large",
-    "url": "https://sudoku.com/",
-    "addedDate": "2026-01-23"
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/sudoku/index.html",
+    "addedDate": "2025-12-26"
   },
   {
-    "name": "Checkers Online",
-    "description": "Juego de damas clasico online",
-    "genre": "strategy",
-    "icon": "fas fa-chess-pawn",
-    "url": "https://checkers.online/",
-    "addedDate": "2026-01-23"
+    "name": "Falling Cubes",
+    "description": "Tetris con cubos que caen",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/cubes/index.html",
+    "addedDate": "2025-12-26"
   },
   {
-    "name": "Solitaire",
-    "description": "El clasico juego de cartas solitario",
-    "genre": "cards",
-    "icon": "fas fa-cards",
-    "url": "https://solitaire.com/",
-    "addedDate": "2026-01-23"
+    "name": "Word Puzzle",
+    "description": "Encuentra palabras ocultas",
+    "genre": "word",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/wordpuzzle/index.html",
+    "addedDate": "2025-12-26"
   },
   {
-    "name": "MK48.io",
-    "description": "Batalla naval de tanques y barcos",
-    "genre": "action",
-    "icon": "fas fa-ship",
-    "url": "https://mk48.io/",
-    "addedDate": "2026-01-23"
-  },
-  {
-    "name": "CyberJumperDemo",
-    "description": "Juego de demostración para probar los controles del emulador nativo",
-    "genre": "native",
-    "icon": "fas fa-gamepad",
-    "url": "https://josevdr95new.github.io/sw/swf/game_native/CyberJumperDemo.html",
-    "addedDate": "2026-01-24"
-  },
-  {
-    "name": "Browser Pong",
-    "description": "El clasico Pong con modos multijugador",
+    "name": "Pinball",
+    "description": "Máquina de pinball clásica",
     "genre": "arcade",
-    "icon": "fas fa-table-tennis-paddle-ball",
-    "url": "https://sethclydesdale.github.io/browser-pong/",
-    "addedDate": "2026-01-23"
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/pinball-online/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Snake Game",
+    "description": "Serpiente que crece con comida",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/snake/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Brick Breakout",
+    "description": "Romper ladrillos con pelota",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/brick-breakout/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Baseball Game",
+    "description": "Béisbol con bate y home runs",
+    "genre": "sports",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/baseball-titan/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Blackjack",
+    "description": "21 contra la banca",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/blackjack-game/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Roulette",
+    "description": "Ruleta europea sin publicidad",
+    "genre": "casino",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/roulette/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Baccarat",
+    "description": "Baccarat estilo Las Vegas",
+    "genre": "casino",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/baccarat/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Craps",
+    "description": "Dados de casino Craps",
+    "genre": "casino",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/craps/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Slots",
+    "description": "Tragamonedas sin dinero real",
+    "genre": "casino",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/free-slots-online/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Red Dog",
+    "description": "Red Dog poker de casino",
+    "genre": "casino",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/red-dog/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "3 Card Poker",
+    "description": "Poker con 3 cartas rápido",
+    "genre": "casino",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/poker/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Rummy",
+    "description": "Rummy con melds y sets",
+    "genre": "cards",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/rummy/index.html",
+    "addedDate": "2025-12-26"
+  },
+  {
+    "name": "Bubble Sorcerer",
+    "description": "Bubble shooter con magia",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/the-sorcerer/index.html",
+    "addedDate": "2025-12-26"
   }
 ]
