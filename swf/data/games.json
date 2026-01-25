@@ -88,6 +88,14 @@
     "addedDate": "2026-01-23"
   },
   {
+    "name": "Cyber Jumper Demo",
+    "description": "Juego de demostración para probar los controles del emulador nativo",
+    "genre": "native",
+    "icon": "fas fa-gamepad",
+    "url": "https://josevdr95new.github.io/sw/cct/swf/game_native/CyberJumperDemo.html",
+    "addedDate": "2026-01-24"
+  },
+  {
     "name": "Browser Pong",
     "description": "El clasico Pong con modos multijugador",
     "genre": "arcade",

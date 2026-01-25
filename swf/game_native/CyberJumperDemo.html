@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Jumper Demo - Native Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0f0f0f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+            overflow: hidden;
+        }
+
+        #game-container {
+            position: relative;
+            width: 640px;
+            height: 480px;
+            background: #0f0f0f;
+            border: 2px solid #00ff41;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+        }
+
+        #game-canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #ui-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        #score-display {
+            color: #00ff41;
+            font-size: 20px;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+        }
+
+        #title-screen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(15, 15, 15, 0.95);
+            color: #00ff41;
+            z-index: 10;
+        }
+
+        #title-screen h1 {
+            font-size: 48px;
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.8);
+            margin-bottom: 20px;
+            animation: flicker 2s infinite;
+        }
+
+        #title-screen p {
+            font-size: 18px;
+            margin: 8px 0;
+            color: #ffffff;
+        }
+
+        #title-screen .blink {
+            animation: blink 1s infinite;
+            color: #00ff41;
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+        #pause-menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(15, 15, 15, 0.9);
+            color: #00ff41;
+            z-index: 20;
+        }
+
+        #pause-menu h2 {
+            font-size: 42px;
+            text-shadow: 0 0 15px rgba(0, 255, 65, 0.8);
+            margin-bottom: 30px;
+        }
+
+        #pause-menu p {
+            font-size: 16px;
+            margin: 6px 0;
+            color: #ffffff;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            92% { opacity: 0.8; }
+            94% { opacity: 1; }
+            96% { opacity: 0.9; }
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        .controls-info {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #00ff41;
+            border-radius: 5px;
+            background: rgba(0, 255, 65, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas" width="640" height="480"></canvas>
+        
+        <div id="ui-overlay">
+            <div id="score-display">SCORE: 000</div>
+        </div>
+
+        <div id="title-screen">
+            <h1>CYBER JUMPER</h1>
+            <p>DEMO NATIVA PARA EMULADOR</p>
+            <div class="controls-info">
+                <p>CRUCETA: Mover</p>
+                <p>A: Saltar | B: Dash</p>
+                <p>START: Pausa</p>
+            </div>
+            <p class="blink">PRESIONA START PARA COMENZAR</p>
+        </div>
+
+        <div id="pause-menu">
+            <h2>PAUSA</h2>
+            <p>START: Reanudar</p>
+            <p>SELECT: Reiniciar</p>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // CYBER JUMPER - Native Game Demo
+        // ==========================================
+        
+        // Canvas setup
+        const canvas = document.getElementById('game-canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // UI Elements
+        const titleScreen = document.getElementById('title-screen');
+        const pauseMenu = document.getElementById('pause-menu');
+        const scoreDisplay = document.getElementById('score-display');
+        
+        // Game State
+        const GameState = {
+            MENU: 'menu',
+            PLAYING: 'playing',
+            PAUSED: 'paused'
+        };
+        
+        let currentState = GameState.MENU;
+        let score = 0;
+        let frameCount = 0;
+        
+        // Input State
+        const keys = {
+            ArrowUp: false,
+            ArrowDown: false,
+            ArrowLeft: false,
+            ArrowRight: false,
+            KeyA: false,
+            KeyB: false,
+            Enter: false,
+            ShiftLeft: false
+        };
+        
+        const keyPress = {
+            KeyA: false,
+            KeyB: false,
+            Enter: false,
+            ShiftLeft: false
+        };
+        
+        // Player Object
+        const player = {
+            x: 100,
+            y: 350,
+            width: 32,
+            height: 32,
+            velocityX: 0,
+            velocityY: 0,
+            speed: 5,
+            jumpForce: -12,
+            gravity: 0.6,
+            grounded: false,
+            facingRight: true,
+            dashCooldown: 0,
+            isDashing: false,
+            dashTimer: 0
+        };
+        
+        // Level Design
+        const platforms = [
+            { x: 0, y: 440, width: 640, height: 40 },
+            { x: 150, y: 360, width: 120, height: 20 },
+            { x: 350, y: 300, width: 120, height: 20 },
+            { x: 500, y: 220, width: 100, height: 20 },
+            { x: 300, y: 160, width: 100, height: 20 },
+            { x: 80, y: 120, width: 120, height: 20 }
+        ];
+        
+        // Collectibles
+        const collectibles = [
+            { x: 200, y: 330, width: 16, height: 16, collected: false },
+            { x: 400, y: 270, width: 16, height: 16, collected: false },
+            { x: 540, y: 190, width: 16, height: 16, collected: false },
+            { x: 340, y: 130, width: 16, height: 16, collected: false },
+            { x: 130, y: 90, width: 16, height: 16, collected: false }
+        ];
+        
+        // Particles
+        const particles = [];
+        
+        // Emulator Key Mappings
+        const EMULATOR_KEYS = {
+            UP: 'ArrowUp',
+            DOWN: 'ArrowDown',
+            LEFT: 'ArrowLeft',
+            RIGHT: 'ArrowRight',
+            A: 'KeyA',
+            B: 'KeyB',
+            START: 'Enter',
+            SELECT: 'ShiftLeft'
+        };
+        
+        // ==========================================
+        // INPUT HANDLING
+        // ==========================================
+        
+        document.addEventListener('keydown', function(event) {
+            if (Object.values(EMULATOR_KEYS).includes(event.code)) {
+                event.preventDefault();
+            }
+            
+            if (keys.hasOwnProperty(event.code)) {
+                keys[event.code] = true;
+                
+                if (event.code === EMULATOR_KEYS.A && !keyPress.KeyA) {
+                    keyPress.KeyA = true;
+                    handleButtonAPress();
+                }
+                if (event.code === EMULATOR_KEYS.B && !keyPress.KeyB) {
+                    keyPress.KeyB = true;
+                    handleButtonBPress();
+                }
+                if (event.code === EMULATOR_KEYS.START && !keyPress.Enter) {
+                    keyPress.Enter = true;
+                    handleStartPress();
+                }
+                if (event.code === EMULATOR_KEYS.SELECT && !keyPress.ShiftLeft) {
+                    keyPress.ShiftLeft = true;
+                    handleSelectPress();
+                }
+            }
+        });
+        
+        document.addEventListener('keyup', function(event) {
+            if (keys.hasOwnProperty(event.code)) {
+                keys[event.code] = false;
+                
+                if (event.code === EMULATOR_KEYS.A) keyPress.KeyA = false;
+                if (event.code === EMULATOR_KEYS.B) keyPress.KeyB = false;
+                if (event.code === EMULATOR_KEYS.START) keyPress.Enter = false;
+                if (event.code === EMULATOR_KEYS.SELECT) keyPress.ShiftLeft = false;
+            }
+        });
+        
+        // Handle postMessage from emulator
+        window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'PAUSE_GAME') {
+                if (currentState === GameState.PLAYING) {
+                    togglePause();
+                } else if (currentState === GameState.PAUSED) {
+                    togglePause();
+                }
+            }
+        });
+        
+        // ==========================================
+        // BUTTON HANDLERS
+        // ==========================================
+        
+        function handleButtonAPress() {
+            if (currentState === GameState.MENU) {
+                startGame();
+            } else if (currentState === GameState.PLAYING && player.grounded) {
+                player.velocityY = player.jumpForce;
+                player.grounded = false;
+                createJumpParticles();
+            } else if (currentState === GameState.PAUSED) {
+                togglePause();
+            }
+        }
+        
+        function handleButtonBPress() {
+            if (currentState === GameState.PLAYING && player.dashCooldown <= 0) {
+                performDash();
+            }
+        }
+        
+        function handleStartPress() {
+            if (currentState === GameState.MENU) {
+                startGame();
+            } else if (currentState === GameState.PLAYING) {
+                togglePause();
+            } else if (currentState === GameState.PAUSED) {
+                togglePause();
+            }
+        }
+        
+        function handleSelectPress() {
+            if (currentState === GameState.PLAYING || currentState === GameState.PAUSED) {
+                resetGame();
+            }
+        }
+        
+        // ==========================================
+        // GAME FUNCTIONS
+        // ==========================================
+        
+        function startGame() {
+            currentState = GameState.PLAYING;
+            titleScreen.style.display = 'none';
+            pauseMenu.style.display = 'none';
+            resetGame();
+        }
+        
+        function togglePause() {
+            if (currentState === GameState.PLAYING) {
+                currentState = GameState.PAUSED;
+                pauseMenu.style.display = 'flex';
+                sendToEmulator({ type: 'PAUSE_GAME', state: 'paused' });
+            } else if (currentState === GameState.PAUSED) {
+                currentState = GameState.PLAYING;
+                pauseMenu.style.display = 'none';
+                sendToEmulator({ type: 'RESUME_GAME', state: 'playing' });
+            }
+        }
+        
+        function resetGame() {
+            player.x = 100;
+            player.y = 350;
+            player.velocityX = 0;
+            player.velocityY = 0;
+            player.grounded = false;
+            player.dashCooldown = 0;
+            player.isDashing = false;
+            
+            score = 0;
+            updateScore();
+            
+            collectibles.forEach(c => c.collected = false);
+            particles.length = 0;
+            
+            if (currentState === GameState.PAUSED) {
+                currentState = GameState.PLAYING;
+                pauseMenu.style.display = 'none';
+            }
+            
+            sendToEmulator({ type: 'RESET_GAME' });
+        }
+        
+        function performDash() {
+            const direction = player.facingRight ? 1 : -1;
+            player.velocityX = direction * 15;
+            player.isDashing = true;
+            player.dashTimer = 10;
+            player.dashCooldown = 60;
+            createDashParticles();
+        }
+        
+        function sendToEmulator(message) {
+            if (window.parent !== window) {
+                window.parent.postMessage(message, '*');
+            }
+        }
+        
+        // ==========================================
+        // PHYSICS AND COLLISION
+        // ==========================================
+        
+        function updatePlayer() {
+            if (currentState !== GameState.PLAYING) return;
+            
+            if (keys[EMULATOR_KEYS.LEFT]) {
+                player.velocityX = -player.speed;
+                player.facingRight = false;
+            } else if (keys[EMULATOR_KEYS.RIGHT]) {
+                player.velocityX = player.speed;
+                player.facingRight = true;
+            } else {
+                player.velocityX = 0;
+            }
+            
+            if (!player.grounded) {
+                player.velocityY += player.gravity;
+            }
+            
+            if (player.dashTimer > 0) {
+                player.dashTimer--;
+                if (player.dashTimer <= 0) {
+                    player.isDashing = false;
+                }
+            }
+            
+            if (player.dashCooldown > 0) {
+                player.dashCooldown--;
+            }
+            
+            player.x += player.velocityX;
+            player.y += player.velocityY;
+            
+            player.grounded = false;
+            platforms.forEach(platform => {
+                if (checkCollision(player, platform)) {
+                    if (player.velocityY > 0 && player.y + player.height - player.velocityY <= platform.y + 5) {
+                        player.y = platform.y - player.height;
+                        player.velocityY = 0;
+                        player.grounded = true;
+                    } else if (player.velocityY < 0 && player.y - player.velocityY >= platform.y + platform.height - 5) {
+                        player.y = platform.y + platform.height;
+                        player.velocityY = 0;
+                    } else if (player.velocityX > 0 && player.x + player.width - player.velocityX <= platform.x) {
+                        player.x = platform.x - player.width;
+                    } else if (player.velocityX < 0 && player.x - player.velocityX >= platform.x + platform.width) {
+                        player.x = platform.x + platform.width;
+                    }
+                }
+            });
+            
+            if (player.x < 0) player.x = 0;
+            if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
+            if (player.y > canvas.height) {
+                player.y = 350;
+                player.x = 100;
+                player.velocityY = 0;
+            }
+            
+            collectibles.forEach(collectible => {
+                if (!collectible.collected && checkCollision(player, collectible)) {
+                    collectible.collected = true;
+                    score += 10;
+                    updateScore();
+                    createCollectParticles(collectible.x + collectible.width / 2, collectible.y + collectible.height / 2);
+                }
+            });
+        }
+        
+        function checkCollision(rect1, rect2) {
+            return rect1.x < rect2.x + rect2.width &&
+                   rect1.x + rect1.width > rect2.x &&
+                   rect1.y < rect2.y + rect2.height &&
+                   rect1.y + rect1.height > rect2.y;
+        }
+        
+        // ==========================================
+        // RENDERING
+        // ==========================================
+        
+        function render() {
+            ctx.fillStyle = '#0f0f0f';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.strokeStyle = '#1a1a1a';
+            ctx.lineWidth = 1;
+            for (let x = 0; x < canvas.width; x += 40) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+            for (let y = 0; y < canvas.height; y += 40) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            }
+            
+            platforms.forEach(platform => {
+                ctx.fillStyle = '#008f11';
+                ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
+                ctx.fillStyle = '#00c41a';
+                ctx.fillRect(platform.x, platform.y, platform.width, 3);
+            });
+            
+            collectibles.forEach(collectible => {
+                if (!collectible.collected) {
+                    const pulse = Math.sin(frameCount * 0.1) * 2;
+                    ctx.fillStyle = '#ff0055';
+                    ctx.fillRect(
+                        collectible.x - pulse, 
+                        collectible.y - pulse, 
+                        collectible.width + pulse * 2, 
+                        collectible.height + pulse * 2
+                    );
+                    ctx.shadowColor = '#ff0055';
+                    ctx.shadowBlur = 10;
+                    ctx.fillRect(collectible.x, collectible.y, collectible.width, collectible.height);
+                    ctx.shadowBlur = 0;
+                }
+            });
+            
+            particles.forEach((particle, index) => {
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+                particle.life--;
+                particle.vy += 0.2;
+                
+                if (particle.life <= 0) {
+                    particles.splice(index, 1);
+                } else {
+                    ctx.fillStyle = particle.color;
+                    ctx.globalAlpha = particle.life / particle.maxLife;
+                    ctx.fillRect(particle.x, particle.y, particle.size, particle.size);
+                    ctx.globalAlpha = 1;
+                }
+            });
+            
+            if (currentState === GameState.PLAYING) {
+                if (player.isDashing) {
+                    ctx.fillStyle = 'rgba(0, 255, 65, 0.3)';
+                    ctx.fillRect(
+                        player.x - player.velocityX * 2, 
+                        player.y, 
+                        player.width, 
+                        player.height
+                    );
+                }
+                
+                ctx.fillStyle = player.isDashing ? '#ffffff' : '#00ff41';
+                ctx.fillRect(player.x, player.y, player.width, player.height);
+                
+                ctx.fillStyle = '#0f0f0f';
+                const eyeX = player.facingRight ? player.x + 20 : player.x + 4;
+                ctx.fillRect(eyeX, player.y + 8, 8, 8);
+                
+                ctx.shadowColor = '#00ff41';
+                ctx.shadowBlur = 15;
+                ctx.fillRect(player.x, player.y, player.width, player.height);
+                ctx.shadowBlur = 0;
+            }
+        }
+        
+        // ==========================================
+        // PARTICLE EFFECTS
+        // ==========================================
+        
+        function createJumpParticles() {
+            for (let i = 0; i < 5; i++) {
+                particles.push({
+                    x: player.x + player.width / 2,
+                    y: player.y + player.height,
+                    vx: (Math.random() - 0.5) * 4,
+                    vy: Math.random() * 2,
+                    size: Math.random() * 4 + 2,
+                    color: '#00ff41',
+                    life: 20,
+                    maxLife: 20
+                });
+            }
+        }
+        
+        function createDashParticles() {
+            const direction = player.facingRight ? -1 : 1;
+            for (let i = 0; i < 8; i++) {
+                particles.push({
+                    x: player.x + player.width / 2,
+                    y: player.y + player.height / 2,
+                    vx: direction * Math.random() * 6 + direction * 2,
+                    vy: (Math.random() - 0.5) * 4,
+                    size: Math.random() * 6 + 3,
+                    color: '#00aaff',
+                    life: 15,
+                    maxLife: 15
+                });
+            }
+        }
+        
+        function createCollectParticles(x, y) {
+            for (let i = 0; i < 10; i++) {
+                const angle = (Math.PI * 2 / 10) * i;
+                particles.push({
+                    x: x,
+                    y: y,
+                    vx: Math.cos(angle) * 3,
+                    vy: Math.sin(angle) * 3,
+                    size: Math.random() * 4 + 2,
+                    color: '#ff0055',
+                    life: 25,
+                    maxLife: 25
+                });
+            }
+        }
+        
+        // ==========================================
+        // UI UPDATES
+        // ==========================================
+        
+        function updateScore() {
+            scoreDisplay.textContent = 'SCORE: ' + score.toString().padStart(3, '0');
+        }
+        
+        // ==========================================
+        // GAME LOOP
+        // ==========================================
+        
+        function gameLoop() {
+            updatePlayer();
+            render();
+            frameCount++;
+            requestAnimationFrame(gameLoop);
+        }
+        
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        
+        gameLoop();
+        
+        console.log('Cyber Jumper Native Demo loaded successfully');
+        console.log('Controls: Arrow keys to move, A to jump, B to dash, Start to pause, Select to reset');
+    </script>
+</body>
+</html>
