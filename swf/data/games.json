@@ -88,7 +88,7 @@
     "addedDate": "2026-01-23"
   },
   {
-    "name": "Cyber Jumper Demo",
+    "name": "CyberJumperDemo",
     "description": "Juego de demostración para probar los controles del emulador nativo",
     "genre": "native",
     "icon": "fas fa-gamepad",
