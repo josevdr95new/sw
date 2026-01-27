@@ -72,14 +72,6 @@
     "addedDate": "2026-01-27"
   },
   {
-    "name": "Dino Game",
-    "description": "Corre con el dinosaurio y evita obstáculos",
-    "genre": "arcade",
-    "icon": "fas fa-game-cartridge",
-    "url": "https://codingwith-adan.github.io/dino-game/",
-    "addedDate": "2026-01-27"
-  },
-  {
     "name": "Lichess",
     "description": "Ajedrez en línea con múltiples opciones",
     "genre": "strategy",
