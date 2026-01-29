@@ -40,14 +40,6 @@
     "addedDate": "2026-01-27"
   },
   {
-    "name": "2048",
-    "description": "Desliza y combina números para alcanzar 2048",
-    "genre": "puzzle",
-    "icon": "fas fa-game-cartridge",
-    "url": "https://play2048.co/",
-    "addedDate": "2026-01-27"
-  },
-  {
     "name": "Hextris",
     "description": "Tetris con hexágonos y rotación",
     "genre": "puzzle",
@@ -72,43 +64,11 @@
     "addedDate": "2026-01-27"
   },
   {
-    "name": "Lichess",
-    "description": "Ajedrez en línea con múltiples opciones",
-    "genre": "strategy",
-    "icon": "fas fa-game-cartridge",
-    "url": "https://lichess.org/",
-    "addedDate": "2026-01-27"
-  },
-  {
     "name": "Sudoku",
     "description": "Sudoku en línea con diferentes niveles",
     "genre": "puzzle",
     "icon": "fas fa-game-cartridge",
     "url": "https://sudoku.com/",
-    "addedDate": "2026-01-27"
-  },
-  {
-    "name": "Checkers Online",
-    "description": "Juego de damas en línea",
-    "genre": "strategy",
-    "icon": "fas fa-game-cartridge",
-    "url": "https://checkers.online/play",
-    "addedDate": "2026-01-27"
-  },
-  {
-    "name": "Solitaire",
-    "description": "Solitario de cartas clásico",
-    "genre": "card",
-    "icon": "fas fa-game-cartridge",
-    "url": "https://solitaire.com/",
-    "addedDate": "2026-01-27"
-  },
-  {
-    "name": "Pong",
-    "description": "Clásico juego de tenis de mesa",
-    "genre": "arcade",
-    "icon": "fas fa-game-cartridge",
-    "url": "https://sethclydesdale.github.io/browser-pong/",
     "addedDate": "2026-01-27"
   },
   {
