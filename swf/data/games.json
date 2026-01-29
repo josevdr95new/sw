@@ -64,19 +64,107 @@
     "addedDate": "2026-01-27"
   },
   {
-    "name": "Sudoku",
-    "description": "Sudoku en línea con diferentes niveles",
-    "genre": "puzzle",
-    "icon": "fas fa-game-cartridge",
-    "url": "https://sudoku.com/",
-    "addedDate": "2026-01-27"
-  },
-  {
     "name": "The Cube",
     "description": "Un puzzle 3D con un cubo giratorio",
     "genre": "puzzle",
     "icon": "fas fa-game-cartridge",
     "url": "https://bsehovac.github.io/the-cube/",
     "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Subway Surfers",
+    "description": "Corre sin fin por las vías del tren esquivando obstáculos y recolectando monedas",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/subway-surfers",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Temple Run 2",
+    "description": "Huye por templos antiguos saltando y deslizándote para escapar de los monstruos",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/temple-run-2",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Stickman Hook",
+    "description": "Balancea al stickman con ganchos para llegar a la meta haciendo acrobacias",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/stickman-hook",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Moto X3M",
+    "description": "Carreras de motos acrobáticas con obstáculos locos y físicas extremas",
+    "genre": "racing",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/moto-x3m",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "2048",
+    "description": "Une números para llegar al 2048 en este adictivo puzzle de lógica",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/2048",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Drive Mad",
+    "description": "Conduce camiones monstruo con físicas locas superando obstáculos imposibles",
+    "genre": "racing",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/drive-mad",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Monkey Mart",
+    "description": "Gestiona tu supermercado como un mono emprendedor y atiende clientes",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/monkey-mart",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Smash Karts",
+    "description": "Battle royale de karts con armas, explosiones y caos multijugador",
+    "genre": "action",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/smash-karts",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Who Is?",
+    "description": "Adivina quién miente en cada situación buscando pistas ocultas",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/who-is",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Bubble Trouble",
+    "description": "Dispara burbujas rebotando hasta destruirlas todas en este clásico arcade",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/bubble-trouble",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Rodeo Stampede",
+    "description": "Monta animales salvajes y doma bestias exóticas en la sabana",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/rodeo-stampede",
+    "addedDate": "2026-01-30"
+  },
+  {
+    "name": "Google Feud",
+    "description": "Adivina las búsquedas más populares de Google completando frases",
+    "genre": "trivia",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://poki.com/es/g/google-feud",
+    "addedDate": "2026-01-30"
   }
 ]

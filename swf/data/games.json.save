@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Othello Reversi",
+    "description": "Reversi contra IA de nivel medio",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/reversi/index.html",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Checkers Game",
+    "description": "Damas clásicas contra IA Albert",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/checkers/index.html",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Find The Word",
+    "description": "Encuentra palabras ocultas en puzzle",
+    "genre": "word",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/wordpuzzle/index.html",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Online Sudoku",
+    "description": "Sudoku con validación automática",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/sudoku/index.html",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Falling Blocks",
+    "description": "Tetris con bloques que caen",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://playpager.com/embed/cubes/index.html",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Hextris",
+    "description": "Tetris con hexágonos y rotación",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://hextris.github.io/hextris/",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Snake Game",
+    "description": "Clásico juego de la serpiente",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://snake-gameonline.github.io/",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Flappy Bird",
+    "description": "Vuela con el pájaro y evita los tubos",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://flappybird.io/",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Sudoku",
+    "description": "Sudoku en línea con diferentes niveles",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://sudoku.com/",
+    "addedDate": "2026-01-27"
+  },
+  {
+    "name": "The Cube",
+    "description": "Un puzzle 3D con un cubo giratorio",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://bsehovac.github.io/the-cube/",
+    "addedDate": "2026-01-27"
+  }
+]
