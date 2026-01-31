@@ -78,5 +78,61 @@
     "icon": "fas fa-game-cartridge",
     "url": "https://bsehovac.github.io/the-cube/",
     "addedDate": "2026-01-27"
+  },
+  {
+    "name": "Tic Tac Toe",
+    "description": "Tres en raya clásico contra IA con soporte multijugador y tableros de diferentes tamaños",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://tmaiadev-tictactoe.netlify.app/",
+    "addedDate": "2026-02-01"
+  },
+  {
+    "name": "Hex Puzzles",
+    "description": "Colección de 500 puzzles tácticos de Hex. Encuentra el movimiento ganador y juega contra la IA hasta resolver cada puzzle",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://www.mseymour.ca/hex_puzzle/hexpuzzle.html",
+    "addedDate": "2026-02-01"
+  },
+  {
+    "name": "Tanx",
+    "description": "Juego de artillería inspirado en el clásico Scorched Earth. Gana créditos para comprar armas más poderosas y defensas",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://www.mseymour.ca/tanx.html",
+    "addedDate": "2026-02-01"
+  },
+  {
+    "name": "Colamone",
+    "description": "Juego de mesa de estrategia similar al ajedrez donde las piezas avanzan en la dirección de sus puntas. Incluye IA desafiante",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://kurehajime.github.io/colamone_js/",
+    "addedDate": "2026-02-01"
+  },
+  {
+    "name": "Prime Sweeper",
+    "description": "Variante del Buscaminas donde las minas están ocultas bajo números primos. Limpia todos los números no primos para ganar",
+    "genre": "puzzle",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://vole.wtf/primesweeper/",
+    "addedDate": "2026-02-01"
+  },
+  {
+    "name": "TacTicToe",
+    "description": "Tres en raya 3D en un cubo 3×3×3 con mecánica de empuje. Consigue 3 piezas en línea en cualquier eje o diagonal",
+    "genre": "strategy",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://tactictoe.io/",
+    "addedDate": "2026-02-01"
+  },
+  {
+    "name": "Snake PWA",
+    "description": "Serpiente clásica implementada como Progressive Web App con controles táctiles por deslizamiento",
+    "genre": "arcade",
+    "icon": "fas fa-game-cartridge",
+    "url": "https://snake-pwa.github.io/",
+    "addedDate": "2026-02-01"
   }
 ]
