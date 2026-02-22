@@ -47,6 +47,15 @@
       "fechaPublicacion": "2025-01-15",
       "imagen": "https://logowik.com/content/uploads/images/coinex9788.jpg",
       "enlace": "https://www.coinex.com/en/register?refer_code=r8g3w"
+    },
+	  "nombre": "Prueba",
+      "descripcion": "Coinex es un intercambio de criptomonedas que funciona para cubanos, permitiendo operaciones P2P y la verificación KYC.",
+      "estado": "Activo",
+      "pago": "Sí",
+      "gratis": "Sí",
+      "fechaPublicacion": "2026-01-15",
+      "imagen": "https://logowik.com/content/uploads/images/coinex9788.jpg",
+      "enlace": "https://www.coinex.com/en/register?refer_code=r8g3w"
     }
   ]
     }
