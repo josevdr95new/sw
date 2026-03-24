@@ -4,7 +4,7 @@
   "juegos": [
     {
       "nombre": "Sunflower Land",
-      "descripcion": "Sunflower Land es un juego play-to-earn donde puedes cultivar, recolectar y comerciar recursos. Lleva 2 años en línea y cuenta con una economía sostenible. Es necesario invertir para migrar las ganancias del juego normal a NFT.",
+      "descripcion": "Sunflower Land es un juego play-to-earn donde puedes cultivar, recolectar y comerciar recursos. Lleva 5 años en línea y cuenta con una economía sostenible. Es necesario invertir para migrar las ganancias del juego normal a NFT.",
       "estado": "Activo",
       "pago": "Sí",
       "gratis": "Sí",
@@ -21,6 +21,16 @@
       "enlace": "https://t.me/fomo_fighters_bot/game?startapp=ref1661848348",
       "imagen": "https://dbc.fmsnsr.xyz/api/files/1nlpavfhdos0lje/oz4ofwo5li8gnc1/screenshot_2025_12_02_17_47_56_69_948cd9899890cbd5c2798760b2b95377_p7ki6knf78.webp?thumb=576x0",
       "fechaPublicacion": "2026-03-18"
+    },
+    {
+      "nombre": "Rumble Arcade",
+      "descripcion": "Rumble Arcade es un juego PvP de escuadrones (squad battler) con física en tiempo real, desarrollado por Tribo Games (ex-creadores de Plants vs. Zombies y Angry Birds). Lanzado en Ronin Network el 29 de enero de 2026, combina auto-battler, deck-building y roguelike en un campo de batalla hexagonal. Ofrece torneos semanales como la Ranked Payday Series con premios en USDC, eventos especiales y un sistema Play & Earn donde las recompensas escalan según tu rango. No requiere NFT para competir en los torneos principales.",
+      "estado": "Activo",
+      "pago": "Sí",
+      "gratis": "Sí",
+      "enlace": "https://play.rumblearcade.io?deepLink=Ra16UF9QSjVlcFl3RzZ0",
+      "imagen": "https://egamers.io/wp-content/uploads/2026/02/13038_news_article_e3e303a18714e4de32ee3b24e3a6243a.jpg",
+      "fechaPublicacion": "2026-03-23"
     }
   ],
   "faucet": [],
