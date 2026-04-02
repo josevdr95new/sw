@@ -4,6 +4,12 @@
         "img": null,
         "descripcion": "Nuestro grupo de asistencia en Telegram está disponible. Verifica el icono de contacto en el menú lateral",
         "enlace": "https://t.me/SoporteApp001"
+    },
+	    {
+        "fecha": "2026-05-02",
+        "img": null,
+        "descripcion": "Hay problemas con las fuentes de noticias, se está trabajando.",
+        "enlace": ""
     }
 
 ]
