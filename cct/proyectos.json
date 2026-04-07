@@ -54,6 +54,15 @@
       "fechaPublicacion": "2025-01-15",
       "imagen": "https://logowik.com/content/uploads/images/coinex9788.jpg",
       "enlace": "https://www.coinex.com/en/register?refer_code=r8g3w"
+    },
+    {
+      "nombre": "ToFarms Bot (TONOW)",
+      "descripcion": "Bot de Telegram para ganar TON completando tareas simples. Tiene más de 117,000 usuarios mensuales. Funciona directamente en la mensajería, sin necesidad de inversión inicial.",
+      "estado": "Activo",
+      "pago": "Sí",
+      "gratis": "Sí",
+      "enlace": "https://t.me/ToFarms_Bot/app?startapp=ii_1661848348",
+      "imagen": "https://ton.org/download/ton_logo_blue.svg",
+      "fechaPublicacion": "2026-04-07"
     }
   ]
-}
