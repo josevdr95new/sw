@@ -57,9 +57,9 @@
     },
     {
       "nombre": "ToFarms Bot (TONOW)",
-      "descripcion": "Bot de Telegram para ganar TON completando tareas simples. Tiene más de 117,000 usuarios mensuales. Funciona directamente en la mensajería, sin necesidad de inversión inicial.",
+      "descripcion": "Bot de Telegram para ganar TON completando tareas simples. Tiene más de 117,000 usuarios mensuales. Funciona directamente en la mensajería, sin necesidad de inversión inicial, se requieren 20 referidos para retirar.",
       "estado": "Activo",
-      "pago": "Sí",
+      "pago": "Probando...",
       "gratis": "Sí",
       "enlace": "https://t.me/ToFarms_Bot/app?startapp=ii_1661848348",
       "imagen": "https://blockchaineconomy.istanbul/storage/speakers/97/IgDaDR3u7SxGOfTBeJDefDVUaYPu7zeUX3NwyFLbdfYgo4uOcKn2RdfZi5JX.png",
