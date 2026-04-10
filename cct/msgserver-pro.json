@@ -5,17 +5,22 @@
         "descripcion": "Nuestro grupo de asistencia en Telegram está disponible. Verifica el icono de contacto en el menú lateral",
         "enlace": "https://t.me/SoporteApp001"
     },
-	{
+    {
         "fecha": "2026-04-02",
         "img": null,
         "descripcion": "Hay problemas con las fuentes de noticias, se está trabajando.",
         "enlace": ""
     },
-	{
+    {
         "fecha": "2026-04-03",
         "img": null,
         "descripcion": "Nueva versión 1.1.0 disponible en apklis que resuelve los problemas anteriores y mejora la APK",
         "enlace": "https://www.apklis.cu/application/appforge.josevdr95.cctrackerpro"
+    },
+    {
+        "fecha": "2026-04-10",
+        "img": null,
+        "descripcion": "Pedimos a los usuarios revisar constantemente la sección de Proyectos. Los actuales funcionan a la fecha, pero no garantizamos su exactitud. Estrellas: ⭐⭐⭐⭐",
+        "enlace": ""
     }
-
 ]
