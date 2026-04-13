@@ -28,5 +28,11 @@
         "img": null,
         "descripcion": "Se recomienda a los usuarios saber de qué trata esta APK y cuál es su objetivo real antes de comprar los planes premium, porque no hay reembolso.",
         "enlace": ""
+    },
+    {
+        "fecha": "2026-04-13",
+        "img": null,
+        "descripcion": "Para solucionar problemas con Premium en CubanCrypto-Tracker Pro:\n\n1. Desinstala la versión actual de CubanCrypto-Tracker Pro.\n2. Instala Apklis (apk), inicia sesión y busca \"CubanCrypto-Tracker Pro\".\n3. Instala la app (apk no desde la web) desde Apklis, acepta los permisos cuando lo solicite.\n4. Abre CubanCrypto-Tracker Pro desde el botón \"Abrir\" de Apklis y procede a comprar el Premium.",
+        "enlace": ""
     }
 ]
