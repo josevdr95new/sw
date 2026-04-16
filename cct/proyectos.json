@@ -1,4 +1,27 @@
 {
+  "estafas": [
+    {
+      "nombre": "BTC Doubler Cuba",
+      "tipo_estafa": "Esquema Ponzi",
+      "nivel_peligro": "Critico",
+      "plataforma": "Telegram",
+      "advertencia": "Prometen duplicar tu BTC en 24 horas. Es imposible, es una estafa."
+    },
+    {
+      "nombre": "CryptoMiner Pro",
+      "tipo_estafa": "Minería falsa",
+      "nivel_peligro": "Alto",
+      "plataforma": "Web",
+      "advertencia": "Te hacen creer que minas crypto pero nunca puedes retirar. Requieren depósito previo."
+    },
+    {
+      "nombre": "Airdrop Gratis Tron",
+      "tipo_estafa": "Phishing",
+      "nivel_peligro": "Alto",
+      "plataforma": "Telegram",
+      "advertencia": "Piden tu frase semilla de la wallet para enviarte el airdrop. Nunca compartas tu frase."
+    }
+  ],
   "airdrop": [],
   "mineria": [],
   "juegos": [
