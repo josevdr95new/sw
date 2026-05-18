@@ -34,5 +34,11 @@
         "img": null,
         "descripcion": "Para solucionar problemas con Premium en CubanCrypto-Tracker Pro:\n\n1. Desinstala la versión actual de CubanCrypto-Tracker Pro.\n2. Instala Apklis (apk), inicia sesión y busca \"CubanCrypto-Tracker Pro\".\n3. Instala la app (apk no desde la web) desde Apklis, acepta los permisos cuando lo solicite.\n4. Abre CubanCrypto-Tracker Pro desde el botón \"Abrir\" de Apklis y procede a comprar el Premium.",
         "enlace": ""
+    }, 
+    {
+    "fecha": "2026-05-17",
+    "img": null,
+    "descripcion": "Se han informado algunos errores y se está tratando de corregir, pero debido a la inestabilidad eléctrica, esta nueva versión con las correcciones puede demorar una cantidad de tiempo considerable.",
+    "enlace": ""
     }
 ]
