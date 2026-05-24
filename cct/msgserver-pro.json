@@ -40,5 +40,11 @@
     "img": null,
     "descripcion": "Se han informado algunos errores y se está tratando de corregir, pero debido a la inestabilidad eléctrica, esta nueva versión con las correcciones puede demorar una cantidad de tiempo considerable.",
     "enlace": ""
+    },
+      {
+    "fecha": "2026-05-24",
+    "img": null,
+    "descripcion": "Nueva versión 1.2.0 disponible en apklis que resuelve los problemas anteriores y mejora la APK, recuerde repotar cualquier error.",
+    "enlace": "https://www.apklis.cu/application/appforge.josevdr95.cctrackerpro"
     }
 ]
