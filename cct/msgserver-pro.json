@@ -1,29 +1,5 @@
 [
     {
-        "fecha": "2026-03-18",
-        "img": null,
-        "descripcion": "Nuestro grupo de asistencia en Telegram está disponible. Verifica el icono de contacto en el menú lateral",
-        "enlace": "https://t.me/SoporteApp001"
-    },
-    {
-        "fecha": "2026-04-02",
-        "img": null,
-        "descripcion": "Hay problemas con las fuentes de noticias, se está trabajando.",
-        "enlace": ""
-    },
-    {
-        "fecha": "2026-04-03",
-        "img": null,
-        "descripcion": "Nueva versión 1.1.0 disponible en apklis que resuelve los problemas anteriores y mejora la APK",
-        "enlace": "https://www.apklis.cu/application/appforge.josevdr95.cctrackerpro"
-    },
-    {
-        "fecha": "2026-04-10",
-        "img": null,
-        "descripcion": "Pedimos a los usuarios revisar constantemente la sección de Proyectos , pero no garantizamos su exactitud",
-        "enlace": ""
-    },
-    {
         "fecha": "2026-04-12",
         "img": null,
         "descripcion": "Se recomienda a los usuarios saber de qué trata esta APK y cuál es su objetivo real antes de comprar los planes premium, porque no hay reembolso.",
@@ -34,17 +10,17 @@
         "img": null,
         "descripcion": "Para solucionar problemas con Premium en CubanCrypto-Tracker Pro:\n\n1. Desinstala la versión actual de CubanCrypto-Tracker Pro.\n2. Instala Apklis (apk), inicia sesión y busca \"CubanCrypto-Tracker Pro\".\n3. Instala la app (apk no desde la web) desde Apklis, acepta los permisos cuando lo solicite.\n4. Abre CubanCrypto-Tracker Pro desde el botón \"Abrir\" de Apklis y procede a comprar el Premium.",
         "enlace": ""
-    }, 
-    {
-    "fecha": "2026-05-17",
-    "img": null,
-    "descripcion": "Se han informado algunos errores y se está tratando de corregir, pero debido a la inestabilidad eléctrica, esta nueva versión con las correcciones puede demorar una cantidad de tiempo considerable.",
-    "enlace": ""
     },
-      {
-    "fecha": "2026-05-24",
-    "img": null,
-    "descripcion": "Nueva versión 1.2.0 disponible en apklis que resuelve los problemas anteriores y mejora la APK, recuerde reportar cualquier error, las versiones anteriores de esta app dejarán de funcionar. SE REQUIERE UNA CONEXIÓN A INTERNET ESTABLE PARA QUE LA APP LOGRE INICIAR CORRETAMENTE",
-    "enlace": "https://www.apklis.cu/application/appforge.josevdr95.cctrackerpro"
+    {
+        "fecha": "2026-05-30",
+        "img": null,
+        "descripcion": "Aviso importante: Los precios actuales de los planes VIP son solo una promoción para agradecer a los nuevos usuarios. Cuando la aplicación alcance las 1000 descargas, los precios del Premium se multiplicarán por 3, es decir: 40 x 3 = 120, 180 x 3 = 540, y 300 x 3 = 900. Ese será el precio del nuevo plan Premium una vez superadas las 1000 descargas.",
+        "enlace": ""
+    },
+    {
+        "fecha": "2026-05-24",
+        "img": null,
+        "descripcion": "Nueva versión 1.2.0 disponible en apklis que resuelve los problemas anteriores y mejora la APK, recuerde reportar cualquier error, las versiones anteriores de esta app dejarán de funcionar. SE REQUIERE UNA CONEXIÓN A INTERNET ESTABLE PARA QUE LA APP LOGRE INICIAR CORRETAMENTE",
+        "enlace": "https://www.apklis.cu/application/appforge.josevdr95.cctrackerpro"
     }
 ]
