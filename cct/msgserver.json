@@ -10,6 +10,12 @@
         "img": null,
         "descripcion": "Hay problemas con las fuentes de noticias",
         "enlace": ""
-    }
+    },
+	{
+    "fecha": "2026-06-24",
+    "img": null,
+    "descripcion": "Aviso importante: El intercambio CoinEx ya cerró su servicio para Cuba. Se recomienda retirar todos los fondos lo antes posible usando una VPN para acceder a la plataforma. Aunque con VPN sigue funcionando, no es recomendable utilizarla de forma habitual por posibles restricciones o riesgos de seguridad. Actúe con precaución.",
+    "enlace": ""
+}
 
 ]
