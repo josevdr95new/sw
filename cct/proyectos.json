@@ -6,6 +6,13 @@
       "nivel_peligro": "Alto",
       "plataforma": "Telegram",
       "advertencia": "Promete ganar TON completando tareas, pero exige 20 referidos para retirar. No paga, es una estafa."
+    },
+    {
+      "nombre": "Fomo Fighters",
+      "tipo_estafa": "Esquema piramidal / Juego falso en Telegram",
+      "nivel_peligro": "Alto",
+      "plataforma": "Telegram",
+      "advertencia": "Juego de ciudad que basa todo su crecimiento en referidos y clanes. No hay pruebas reales de pagos sostenibles. Se recomienda **reportar el bot** (@fomo_fighters_bot) directamente a Telegram por fraude y no compartir su enlace con nadie."
     }
   ],
   "airdrop": [],
@@ -20,26 +27,6 @@
       "enlace": "https://sunflower-land.com/play/?ref=Skulldr",
       "imagen": "https://images.ctfassets.net/the2mlmvkyaw/49vYX8z05Pui0bRC1BtWs3/fed4eb45be7941c0bc3108e965624d32/Sunflower_land.png",
       "fechaPublicacion": "2025-01-09"
-    },
-    {
-      "nombre": "Fomo Fighters",
-      "descripcion": "Juego dentro de Telegram donde desarrollas tu ciudad, te unes a clanes y participas en guerras épicas. Con más de 130,000 usuarios mensuales, ofrece una experiencia de estrategia y comunidad directamente en la mensajería.",
-      "estado": "Activo",
-      "pago": "Sí",
-      "gratis": "Sí",
-      "enlace": "https://t.me/fomo_fighters_bot/game?startapp=ref1661848348",
-      "imagen": "https://dbc.fmsnsr.xyz/api/files/1nlpavfhdos0lje/oz4ofwo5li8gnc1/screenshot_2025_12_02_17_47_56_69_948cd9899890cbd5c2798760b2b95377_p7ki6knf78.webp?thumb=576x0",
-      "fechaPublicacion": "2026-03-18"
-    },
-    {
-      "nombre": "Rumble Arcade",
-      "descripcion": "Rumble Arcade es un juego PvP de escuadrones (squad battler) con física en tiempo real, desarrollado por Tribo Games (ex-creadores de Plants vs. Zombies y Angry Birds). Lanzado en Ronin Network el 29 de enero de 2026, combina auto-battler, deck-building y roguelike en un campo de batalla hexagonal. Ofrece torneos semanales como la Ranked Payday Series con premios en USDC, eventos especiales y un sistema Play & Earn donde las recompensas escalan según tu rango. No requiere NFT para competir en los torneos principales.",
-      "estado": "Activo",
-      "pago": "Sí",
-      "gratis": "Sí",
-      "enlace": "https://play.rumblearcade.io?deepLink=Ra16UF9QSjVlcFl3RzZ0",
-      "imagen": "https://egamers.io/wp-content/uploads/2026/02/13038_news_article_e3e303a18714e4de32ee3b24e3a6243a.jpg",
-      "fechaPublicacion": "2026-03-23"
     }
   ],
   "faucet": [],
