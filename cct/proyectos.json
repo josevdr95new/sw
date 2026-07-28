@@ -9,10 +9,10 @@
     },
     {
       "nombre": "Fomo Fighters",
-      "tipo_estafa": "Esquema piramidal / Juego falso en Telegram",
+      "tipo_estafa": "Esquema Ponzi / Piramidal",
       "nivel_peligro": "Alto",
       "plataforma": "Telegram",
-      "advertencia": "Juego de ciudad que basa todo su crecimiento en referidos y clanes. No hay pruebas reales de pagos sostenibles. Se recomienda **reportar el bot** (@fomo_fighters_bot) directamente a Telegram por fraude y no compartir su enlace con nadie."
+      "advertencia": "Juego de ciudad que paga pequeñas cantidades (ej. 0.1 USDT) desde hace meses para dar credibilidad, pero su modelo es insostenible: solo se sostiene con la entrada constante de nuevos usuarios mediante referidos y clanes. Es un clásico esquema Ponzi disfrazado de juego. Se recomienda reportar el bot (@fomo_fighters_bot) a Telegram y no compartir su enlace."
     }
   ],
   "airdrop": [],
