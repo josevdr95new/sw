@@ -15,7 +15,18 @@
       "advertencia": "Juego de ciudad que paga pequeñas cantidades (ej. 0.1 USDT) desde hace meses para dar credibilidad, pero su modelo es insostenible: solo se sostiene con la entrada constante de nuevos usuarios mediante referidos y clanes. Es un clásico esquema Ponzi disfrazado de juego. Se recomienda reportar el bot (@fomo_fighters_bot) a Telegram y no compartir su enlace."
     }
   ],
-  "airdrop": [],
+  "airdrop": [
+    {
+      "nombre": "Yakkamon",
+      "descripcion": "🔥 YAKKAMON 2026 – El Airdrop con Aval 🔥\nDel equipo de SUNFLOWER-LAND (más de 5 AÑOS online, proyecto serio). Realiza tareas diarias e invita amigos para subir en el ranking global y obtener recompensas. Gratuito, sin inversión. Código con ventajas: YAKKA-PFVTWQ. Comunidad ES: https://t.me/YakkamonEs. ⚠️ No es recomendación de inversión.",
+      "estado": "Activo",
+      "pago": "Sí",
+      "gratis": "Sí",
+      "enlace": "https://yakkamon.com/",
+      "imagen": "https://docs.yakkamon.com/~gitbook/image?url=https%3A%2F%2F3777468385-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FPCjLqiFAZZfmuQmc2nG9%252Fuploads%252FQFVMnIhTEuQ1JvoMxkIg%252FGroup%25201.png%3Falt%3Dmedia%26token%3D084e5a5d-e2cb-4cb0-bb68-4512186e1870&width=768&dpr=1&quality=100&sign=1728ac09&sv=2",
+      "fechaPublicacion": "2026-08-05"
+    }
+  ],
   "mineria": [],
   "juegos": [
     {
